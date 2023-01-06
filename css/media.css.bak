@@ -1,0 +1,447 @@
+@media (min-width:1901px)
+{
+}
+
+@media (min-width:1851px) and (max-width:3000px)
+{
+}
+
+@media (min-width:1601px) and (max-width:1850px)
+{
+.DBheader-nav ul li a {font-size: 13px;font-size: 13px;line-height: 15px;padding: 0 10px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 17px;padding: 0 0 0 17px;}	
+.list-subscribers-main tr td {font-size: 14px;}	
+	
+	
+}
+
+@media (min-width:1367px) and (max-width:1600px)
+{
+.cont-login-form h1, .cont-login-form h2 {font-size: 22px;line-height: 28px;}	
+.DBheader-nav ul li a {font-size: 13px;font-size: 13px;line-height: 15px;padding: 0 10px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 10px;padding: 0 0 0 10px;}
+.list-subscribers-main tr td {font-size: 14px;}	
+.Dashboard-title h1 {font-size: 20px;}		
+.HeaderleftInner {width: 220px;}	
+.HeaderRightInner {width: calc(100% - 220px);}	
+.left-fix-con {width: 260px;padding: 75px 15px 30px 15px;}	
+.logo-con img {width: 180px;}	
+.logo-con {width: 260px;}
+.headerRightOuter {width: calc(100% - 260px);padding: 0 20px 0 20px;}	
+.right-side-con {width: calc(100% - 260px);padding: 30px 20px;}	
+.list-subscribers-main tr th:first-child, .list-subscribers-main tr td:first-child {padding-left: 30px;}	
+.dashboardSubscribers-left select {font-size: 15px;height: 45px;}	
+.list-subscribers-main #example_length label, .list-subscribers-main .dataTables_filter {font-size: 14px;}	
+.cont-income-info {font-size: 14px;}	
+.HeaderSearchOuter input {width: calc(100% - 20px);font-size: 14px;}
+.HeaderSearchOuter button {width: 20px;}
+.profilePicOuter a span strong {font-size: 15px;line-height: 19px;}	
+.profile-pic {width: 38px;height: 38px;margin-right: 8px;}	
+.dashboard-body {padding: 25px;}
+.list-subscribers-main tr th {padding: 20px 15px;font-size: 14px;}	
+.fl-wf.dashboard-head-left.DBaccount-head1 h4 {font-size: 15px;}	
+.cont-form-tabs .nav button {font-size: 17px;}
+.CreateProjectInner label {font-size: 15px;line-height: 21px;}	
+.otr-form-field label {font-size: 15px;}
+
+
+	
+}
+
+@media (min-width:1200px) and (max-width:1366px)
+{
+.cont-login-form h1, .cont-login-form h2 {font-size: 22px;line-height: 28px;}	
+.DBheader-nav ul li a {font-size: 13px;font-size: 13px;line-height: 15px;padding: 0 10px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 10px;padding: 0 0 0 10px;}
+.list-subscribers-main tr td {font-size: 14px;}	
+.Dashboard-title h1 {font-size: 20px;line-height: 23px;}	
+.HeaderleftInner {width: 120px;}
+.HeaderRightInner {width: calc(100% - 120px);}	
+.left-fix-con {width: 260px;padding: 75px 15px 30px 15px;}	
+.logo-con img {width: 180px;}	
+.logo-con {width: 260px;}
+.headerRightOuter {width: calc(100% - 260px);padding: 0 20px 0 20px;}	
+.right-side-con {width: calc(100% - 260px);padding: 30px 20px;}	
+.list-subscribers-main tr th:first-child, .list-subscribers-main tr td:first-child {padding-left: 30px;}	
+.dashboardSubscribers-left select {font-size: 15px;height: 45px;}	
+.list-subscribers-main #example_length label, .list-subscribers-main .dataTables_filter {font-size: 14px;}	
+.cont-income-info {font-size: 14px;}	
+.HeaderSearchOuter input {width: calc(100% - 20px);font-size: 14px;}
+.HeaderSearchOuter button {width: 20px;}
+.profilePicOuter a span strong {font-size: 15px;line-height: 19px;}	
+.profile-pic {width: 38px;height: 38px;margin-right: 8px;}	
+.dashboard-body {padding: 25px;}
+.list-subscribers-main tr th {padding: 20px 15px;font-size: 14px;}	
+.fl-wf.dashboard-head-left.DBaccount-head1 h4 {font-size: 15px;}	
+.cont-form-tabs .nav button {font-size: 17px;}
+.CreateProjectInner label {font-size: 15px;line-height: 21px;}	
+.otr-form-field label {font-size: 15px;}
+.NotificationCon a .fa-bell {font-size: 18px;}
+.NotificationCon a span {top: -4px;width: 6px;height: 6px;}
+.HeaderSearchOuter {width: 150px;}
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px)
+{
+.cont-login-form h1, .cont-login-form h2 {font-size: 22px;line-height: 28px;}	
+.DBheader-nav ul li a {font-size: 13px;font-size: 11.5px;line-height: 15px;padding: 0 8px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 10px;padding: 0 0 0 10px;}
+.list-subscribers-main tr td {font-size: 14px;}	
+.Dashboard-title h1 {font-size: 20px;line-height: 23px;}	
+.HeaderleftInner {width: 120px;}
+.HeaderRightInner {width: calc(100% - 120px);}	
+.left-fix-con {width: 240px;padding: 75px 15px 30px 15px;}	
+.logo-con img {width: 180px;}	
+.logo-con {width: 240px;}
+.headerRightOuter {width: calc(100% - 240px);padding: 0 20px 0 20px;}	
+.right-side-con {width: calc(100% - 240px);padding: 30px 20px;}	
+.list-subscribers-main tr th:first-child, .list-subscribers-main tr td:first-child {padding-left: 30px;}	
+.dashboardSubscribers-left select {font-size: 14px;height: 40px;}
+.list-subscribers-main #example_length label, .list-subscribers-main .dataTables_filter {font-size: 14px;}	
+.cont-income-info {font-size: 14px;}	
+.HeaderSearchOuter input {width: calc(100% - 20px);font-size: 14px;}
+.HeaderSearchOuter button {width: 20px;}
+.profilePicOuter a span strong {font-size: 15px;line-height: 19px;}	
+.profile-pic {width: 38px;height: 38px;margin-right: 8px;}	
+.dashboard-body {padding: 25px;}
+.list-subscribers-main tr th {padding: 20px 15px;font-size: 14px;}	
+.fl-wf.dashboard-head-left.DBaccount-head1 h4 {font-size: 15px;}	
+.cont-form-tabs .nav button {font-size: 15px;line-height: 20px;padding: 15px 15px;}
+.CreateProjectInner label {font-size: 15px;line-height: 21px;}	
+.otr-form-field label {font-size: 15px;}
+.NotificationCon a .fa-bell {font-size: 18px;}
+.NotificationCon a span {top: -4px;width: 6px;height: 6px;}
+.HeaderSearchOuter {width: 150px;}	
+.left-nav-con li a {padding: 13px 14px;margin-bottom: 5px;font-size: 14px;line-height: 20px;}
+.DBheader-nav {display: inline-block;margin-right: 0px;width: 100%;text-align: right;margin-bottom: 8px;margin-top: -8px;}
+.HeaderRightInner {flex-wrap: wrap;}
+header {height: 85px;}
+.left-nav-con {margin-top: 20px;}
+.dashboardSubscribers-left {width: 220px;}
+.list-subscribers-main {font-size: 0px;overflow: auto;}
+.list-subscribers-main table {width: 1200px !important;}
+.cont-form-tabs .tab-content {padding: 30px 15px;}
+.CreateProjectInner .SaveCreateButton {font-size: 15px;}
+.CreateProjectInner input, .CreateProjectInner textarea, .CreateProjectInner select {font-size: 15px;line-height: 24px;padding: 10px 15px;}
+
+
+}
+
+@media (min-width:768px) and (max-width:991px)
+{
+.cont-login-form h1, .cont-login-form h2 {font-size: 22px;line-height: 28px;}	
+.DBheader-nav ul li a {font-size: 13px;font-size: 11.5px;line-height: 15px;padding: 0 8px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 8px;padding: 0 0 0 8px;}
+.list-subscribers-main tr td {font-size: 14px;}	
+.Dashboard-title h1 {font-size: 20px;line-height: 23px;}	
+.HeaderleftInner {width: 120px;}
+.HeaderRightInner {width: calc(100% - 120px);}	
+.left-fix-con {width: 240px;padding: 75px 15px 30px 15px;}	
+.logo-con img {width: 142px;}	
+.logo-con {width: 190px;}
+.headerRightOuter {width: calc(100% - 190px);padding: 0 15px 0 15px;}
+.right-side-con {width:100%;padding: 30px 20px;}	
+.list-subscribers-main tr th:first-child, .list-subscribers-main tr td:first-child {padding-left: 30px;}	
+.dashboardSubscribers-left select {font-size: 14px;height: 40px;}
+.list-subscribers-main #example_length label, .list-subscribers-main .dataTables_filter {font-size: 14px;}	
+.cont-income-info {font-size: 14px;}	
+.HeaderSearchOuter input {width: calc(100% - 20px);font-size: 14px;}
+.HeaderSearchOuter button {width: 18px;}
+.profilePicOuter a span strong {font-size: 15px;line-height: 19px;}	
+.profile-pic {width: 38px;height: 38px;margin-right: 0px;}	
+.dashboard-body {padding: 25px;}
+.list-subscribers-main tr th {padding: 20px 15px;font-size: 14px;}	
+.fl-wf.dashboard-head-left.DBaccount-head1 h4 {font-size: 14px;line-height: 14px;}	
+.cont-form-tabs .nav button {font-size: 14px;line-height: 20px;padding: 11px 22px;width: auto;}
+.CreateProjectInner label {font-size: 15px;line-height: 21px;}	
+.otr-form-field label {font-size: 15px;}
+.NotificationCon a .fa-bell {font-size: 18px;}
+.NotificationCon a span {top: -4px;width: 6px;height: 6px;}
+.HeaderSearchOuter {width: 80px;}
+.left-nav-con li a {padding: 11px 10px 11px 8px;margin-bottom: 5px;font-size: 13px;line-height: 20px;display: flex;}
+.DBheader-nav {display: inline-block;margin-right: 0px;width: 100%;text-align: right;margin-bottom: 8px;margin-top: -8px;}
+.HeaderRightInner {flex-wrap: wrap;}
+header {height: 85px;}
+.left-nav-con {margin-top: 20px;}
+.dashboardSubscribers-left {width: 220px;}
+.list-subscribers-main {font-size: 0px;overflow: auto;}
+.list-subscribers-main table {width: 1200px !important;}
+.cont-form-tabs .tab-content {padding: 30px 15px;}
+.CreateProjectInner .SaveCreateButton {font-size: 15px;}
+.CreateProjectInner input, .CreateProjectInner textarea, .CreateProjectInner select {font-size: 15px;line-height: 24px;padding: 10px 15px;}
+.list-subscribers-main .dataTables_filter input {width: 80px !important;}
+.dashboard-head-left {width: 100%;padding: 0 0px 15px 0px;text-align: center;}
+.dashboard-head-right {width: 100%;padding: 0;text-align: center;}
+.cont-total-income {float: none;display: inline-block;padding-right: 0;}
+.cont-income-info {margin: 0;}	
+.cont-settings-form .CreateFormCon {padding: 0 0 20px 0;width: 100%;}
+.cont-settings-form .CreateFormButton {padding: 10px 0 0;}
+.dashboard-head {margin: 0 0 20px;}	
+
+button.navbar-toggle {display: block !important;position: relative;right: 11px;top: 0px;margin: 0;padding: 0;cursor: pointer;
+background: transparent;border: 0px;z-index: 99999;text-align: right;width: 27px;height: 30px;margin-left: 30px;}
+button.navbar-toggle .icon-bar {display: block;width: 32px;height: 3px;border-radius: 0px;background: #383E42;transition: all 0.2s ease-in-out;
+-webkit-transition: all 0.2s ease-in-out;float: left;width: 100%;border-radius: 9px;}
+button.navbar-toggle .icon-bar + .icon-bar {margin-top: 4px;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(1) {-webkit-transform: rotate(44deg);left: 0px;position: relative;top: 5px;width: 26px;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(2) {display: none;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(3) {transform: rotate(45deg);-webkit-transform: rotate(134deg);left: 0px;position: relative;top: -2px;}
+button.navbar-toggle .icon-bar:nth-child(1) {width: 15px;}
+button.navbar-toggle .icon-bar:nth-child(2) {width: 20px;}
+.CP-NotificationCon {text-align: center;}
+button.navbar-toggle:hover .icon-bar:nth-child(1) {width:26px;}
+button.navbar-toggle:hover .icon-bar:nth-child(2) {width:33px;}
+.left-fix-con {position: fixed;left: -300px;height: 100vh;top: 0;width: 190px !important;transition: 0.7s all ease;-webkit-transition: 0.7s all ease;
+display: block;right: auto;padding: 80px 10px 20px 10px;background-size: cover;overflow: auto;z-index: 9;}
+body.nav-open .left-fix-con {left: 0;}
+body.nav-open .right-side-con {width: calc(100% - 190px);padding: 30px 20px;}
+.left-nav-con li a span:last-child {padding-top: 0 !important;height: auto;line-height: 20px;float: left;}
+.profilePicOuter a span {display: none;}
+
+}
+
+@media (max-width:767px)
+{
+.cont-login-form h1, .cont-login-form h2 {font-size: 22px;line-height: 28px;}	
+.DBheader-nav ul li a {font-size: 13px;font-size: 11.5px;line-height: 15px;padding: 0 8px;}	
+.HeaderRightInner-grid {margin: 0px 0 0 8px;padding: 0 0 0 8px;}
+.list-subscribers-main tr td {font-size: 14px;}	
+.Dashboard-title h1 {font-size: 24px;line-height: 32px;}
+.HeaderleftInner {width: 120px;}
+.HeaderRightInner {width: 100%;}	
+.left-fix-con {width: 240px;padding: 75px 15px 30px 15px;}	
+.logo-con img {width: 142px;}	
+.logo-con {width: 190px;}
+.headerRightOuter {width: calc(100% - 190px);padding: 0 15px 0 15px;}
+.right-side-con {width:100%;padding: 30px 20px;}	
+.list-subscribers-main tr th:first-child, .list-subscribers-main tr td:first-child {padding-left: 30px;}	
+.dashboardSubscribers-left select {font-size: 14px;height: 40px;}
+.list-subscribers-main #example_length label, .list-subscribers-main .dataTables_filter {font-size: 14px;}	
+.cont-income-info {font-size: 14px;}	
+.HeaderSearchOuter input {width: calc(100% - 20px);font-size: 14px;}
+.HeaderSearchOuter button {width: 18px;}
+.profilePicOuter a span strong {font-size: 15px;line-height: 19px;}	
+.profile-pic {width: 38px;height: 38px;margin-right: 0px;}	
+.dashboard-body {padding: 25px;}
+.list-subscribers-main tr th {padding: 20px 15px;font-size: 14px;}	
+.fl-wf.dashboard-head-left.DBaccount-head1 h4 {font-size: 14px;line-height: 14px;}	
+.cont-form-tabs .nav button {font-size: 14px;line-height: 20px;padding: 11px 22px;width: auto;}
+.CreateProjectInner label {font-size: 15px;line-height: 21px;}	
+.otr-form-field label {font-size: 15px;}
+.NotificationCon a .fa-bell {font-size: 18px;}
+.NotificationCon a span {top: -4px;width: 6px;height: 6px;}
+.HeaderSearchOuter {width: 80px;}
+.left-nav-con li a {padding: 11px 10px 11px 8px;margin-bottom: 5px;font-size: 13px;line-height: 20px;display: flex;}
+.DBheader-nav {display: inline-block;margin-right: 0px;width: 100%;text-align: right;margin-bottom: 8px;margin-top: -8px;}
+.HeaderRightInner {flex-wrap: wrap;}
+header {height: 85px;}
+.left-nav-con {margin-top: 20px;}
+.dashboardSubscribers-left {width: 220px;}
+.list-subscribers-main {font-size: 0px;overflow: auto;}
+.list-subscribers-main table {width: 1200px !important;}
+.cont-form-tabs .tab-content {padding: 30px 15px;}
+.CreateProjectInner .SaveCreateButton {font-size: 15px;}
+.CreateProjectInner input, .CreateProjectInner textarea, .CreateProjectInner select {font-size: 15px;line-height: 24px;padding: 10px 15px;}
+.list-subscribers-main .dataTables_filter input {width: 80px !important;}
+.dashboard-head-left {width: 100%;padding: 0 0px 15px 0px;text-align: center;}
+.dashboard-head-right {width: 100%;padding: 0;text-align: center;}
+.cont-total-income {float: none;display: inline-block;padding-right: 0;}
+.cont-income-info {margin: 0;}	
+.cont-settings-form .CreateFormCon {padding: 0 0 20px 0;width: 100%;}
+.cont-settings-form .CreateFormButton {padding: 10px 0 0;}
+.dashboard-head {margin: 0 0 20px;}	
+
+button.navbar-toggle {display: block !important;position: relative;right: 11px;top: 0px;margin: 0;padding: 0;cursor: pointer;
+background: transparent;border: 0px;z-index: 99999;text-align: right;width: 27px;height: 30px;margin-left: 30px;}
+button.navbar-toggle .icon-bar {display: block;width: 32px;height: 3px;border-radius: 0px;background: #383E42;transition: all 0.2s ease-in-out;
+-webkit-transition: all 0.2s ease-in-out;float: left;width: 100%;border-radius: 9px;}
+button.navbar-toggle .icon-bar + .icon-bar {margin-top: 4px;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(1) {-webkit-transform: rotate(44deg);left: 0px;position: relative;top: 5px;width: 26px;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(2) {display: none;}
+.nav-open button.navbar-toggle .icon-bar:nth-child(3) {transform: rotate(45deg);-webkit-transform: rotate(134deg);left: 0px;position: relative;top: -2px;}
+button.navbar-toggle .icon-bar:nth-child(1) {width: 15px;}
+button.navbar-toggle .icon-bar:nth-child(2) {width: 20px;}
+.CP-NotificationCon {text-align: center;}
+button.navbar-toggle:hover .icon-bar:nth-child(1) {width:26px;}
+button.navbar-toggle:hover .icon-bar:nth-child(2) {width:33px;}
+.left-fix-con {position: fixed;left: -300px;height: 100vh;top: 0;width: 190px !important;transition: 0.7s all ease;-webkit-transition: 0.7s all ease;
+display: block;right: auto;padding: 80px 10px 20px 10px;background-size: cover;overflow: auto;z-index: 9;}
+body.nav-open .left-fix-con {left: 0;}
+body.nav-open .right-side-con {width: calc(100% - 190px);padding: 30px 20px;}
+.left-nav-con li a span:last-child {padding-top: 0 !important;height: auto;line-height: 20px;float: left;}
+.profilePicOuter a span {display: none;}
+.HeaderleftInner.DesktopView {display: none;}
+.Dashboard-title.MobileView {display: block !important;margin-bottom: 20px;}
+.cont-login-logo img {max-width: 260px;}
+.cont-login-form {padding: 20px;}
+.list-subscribers-main #example_info {
+	font-size: 13px;
+	width: 100%;
+	text-align: center;
+}
+.list-subscribers-main #example_paginate {
+	float: right;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+}
+
+@media (max-width:639px)
+{
+.DBheader-nav {
+	display: block;
+	position: absolute;
+	top: -4px;
+	background: #fff;
+	z-index: 9;
+	padding: 4px;
+}
+header {
+	margin-top: 10px;
+}
+.HeaderRightInner-grid.HeaderSearchOuter::before {
+	display:none;
+}
+.left-fix-con {
+	width: 160px !important;
+}
+.logo-con {
+	width: 160px;
+}
+.logo-con img {
+	width: 132px;
+}
+body.nav-open .right-side-con {
+	width: calc(100% - 160px);
+	padding: 30px 15px;
+}
+.headerRightOuter {
+	width: calc(100% - 160px);
+	padding: 0 15px 0 10px;
+}
+.DBheader-nav ul li a {
+	font-size: 13px;
+	font-size: 10.5px;
+	line-height: 15px;
+	padding: 0 8px;
+}	
+.list-subscribers-main #example_length {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.list-subscribers-main #example_filter {
+	display: inline-block;
+	float: right;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.list-subscribers-main #example_filter input {
+	width: 190px !important;
+}
+.cont-income-info {
+	margin: 0 10px;
+}	
+	
+}
+
+@media (max-width:479px)
+{
+/*Login Start*/
+.cont-login-form {padding: 20px 15px;}
+/*Login End*/
+
+/*Forgot Password Start*/
+.cont-login-form h1 {font-size: 20px;line-height: 26px;}
+/*Forgot Password End*/
+
+
+.cont-login-middle {
+	display: inline-block;
+	width: 100%;
+	max-width: 100%;
+	padding: 20px 15px;
+}
+.cont-login-logo img {
+	max-width: 240px;
+}
+.otr-form-field label {
+	font-size: 14px;
+}
+.otr-form-field {
+	margin: 7px 0;
+	padding: 0 0px;
+}
+.password-forgot a {
+	font-size: 14px;
+}
+.cont-signup a {
+	font-size: 14px;
+}
+.otr-button-field input {
+	font-size: 15px;
+}
+.logo-con img {
+	width: 122px;
+}
+.dashboard-body {
+	padding: 25px 15px;
+}
+.cont-form-tabs .nav button {
+	font-size: 13px;
+	line-height: 19px;padding: 11px 13px;
+}
+.CreateProjectInner label {
+	font-size: 14px;
+	line-height: 20px;
+}
+.CreateProjectInner input, .CreateProjectInner textarea, .CreateProjectInner select {
+	font-size: 15px;
+	line-height: 14px;
+	padding: 8px 15px;
+}
+.CreateProjectInner .SaveCreateButton {
+	font-size: 15px;
+	padding: 9px 30px;
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+}
+.HeaderSearchOuter {
+	width: 71px;
+}
+.HeaderRightInner-grid {
+	margin: 0px 0 0 5px;
+	padding: 0 0 0 5px;
+}
+button.navbar-toggle {
+	margin-left: 20px;
+}
+.HeaderRightInner {
+	width: 100%;
+	margin-top: 10px;
+}
+.DBheader-nav ul {
+	list-style: none;
+	margin: 0;
+	display: inline-flex;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}
+.DBheader-nav {
+	left: 0;
+	top: -7px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+header {
+	height: 95px;
+}
+
+}
