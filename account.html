@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wenova</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="fontawesome/css/all.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/media.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link REL="SHORTCUT ICON"  href="images/favicon.png" />
+</head>
+
+<body>
+
+<div class="main-container">
+				
+	<!--HEADER START-->
+	<header>
+		<div class="headerleftOuter">
+			<div class="logo-con"><a href="javascript:;"><img src="images/logo-white.png" alt="Logo"></a></div>
+		</div>
+		<div class="headerRightOuter">
+			<div class="HeaderleftInner DesktopView">
+				<div class="Dashboard-title">
+					<h1>Mon compte</h1>
+				</div>
+			</div>
+			<div class="HeaderRightInner">
+				<div class="DBheader-nav">
+					<ul>
+						<li><a href="#">Souscription en ligne</a></li>
+						<li><a href="#">Wenova Asset Management</a></li>
+						<li><a href="#">Documentation</a></li>
+					</ul>
+				</div>
+				<div class="HeaderRightInner-grid HeaderSearchOuter">
+					<button><img src="images/img_search.svg" alt="Seacrch Icon"></button>
+					<input type="text" placeholder="Search something here">
+				</div>
+				<div class="HeaderRightInner-grid all-notifications1">
+					<div class="NotificationCon">
+						<a href="#" class="dropdown-toggle" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bell"></i> <span></span></a>
+						<ul class="dropdown-menu NotificationDropdownCon" aria-labelledby="dropdown03">
+						<li><a class="dropdown-item" href="#">Lorem Ipsum has been... <strong class="SubText">Now</strong></a></li>
+						<li><a class="dropdown-item" href="#">Lorem Ipsum has been... <strong class="SubText">1h ago</strong></a></li>
+						<li><a class="dropdown-item" href="#">See all notification</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="HeaderRightInner-grid profilePicOuter-grid">
+					<div class="profilePicOuter nav-item dropdown">
+						<a class="dropdown-toggle" href="javascript:;" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">
+							<div class="profile-pic"><img src="images/person-3.jpg" alt="Profile Pic"></div>
+							<span><strong>John Mix</strong>Site Manager</span>
+						</a>
+						<!--ul class="dropdown-menu" aria-labelledby="dropdown04">
+							<li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Mon compte</a></li>
+							<li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnecter</a></li>
+						</ul-->
+					</div>
+				</div>
+				
+				<!--Toggle-Button-->
+					<button class="navbar-toggle" style="display:none;">
+						<span class="icon-bar"></span>
+						<span  class="icon-bar"></span>
+						<span  class="icon-bar"></span>
+					</button>
+				<!--Toggle-Button-->
+				
+			</div>
+		</div>
+	</header>
+	<!--HEADER END-->
+		
+	<!--CONTENT PART START-->
+	<section class="dashboardContentOuterPanel">
+		<!--LEFT-SIDEBAR-->
+			<div class="left-fix-con">
+				<div class="left-side-con">
+					<div class="left-nav-con">
+						<ul>
+							<li class="active">
+								<a href="account.html"><span><i class="fa-solid fa-user"></i></span><span>Mon compte</span></a>
+							</li>
+							<li>
+								<a href="list-of-subscribers.html"><span><i class="fa-regular fa-rectangle-list"></i></span><span>Liste des souscriptions</span></a>
+							</li>
+							<li>
+								<a href="payment-tracking.html"><span><i class="fa-solid fa-money-bill-1-wave"></i></span><span>Suivi des paiements</span></a>
+							</li>
+							<!-- <li> -->
+								<!-- <a href="#"><span><i class="fa-solid fa-globe"></i></span><span>Souscriptions en ligne</span></a> -->
+							<!-- </li> -->
+							<!-- <li> -->
+								<!-- <a href="#"><span><i class="fa-solid fa-cubes"></i></span><span>Wenova Asset Management</span></a> -->
+							<!-- </li> -->
+							<!-- <li> -->
+								<!-- <a href="#"><span><i class="fa-solid fa-book"></i></span><span>Documentation des fonds</span></a> -->
+							<!-- </li> -->
+							<li>
+								<a href="#"><span><i class="fa-solid fa-right-from-bracket"></i></span><span>Déconnecter</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="HeaderSearchOuter mobile-view1" style="display:none;">
+						<button><img src="images/img_search.svg" alt="Seacrch Icon"></button>
+						<input type="text" placeholder="Search...">
+				   </div>
+				</div>
+			</div>
+		<!--LEFT-SIDEBAR-END-->
+		
+		<!--RIGHT-SIDEBAR-->
+			<div class="right-side-con">
+				<!-- Right body part -->
+				<div class="fl-wf flex dashboard-head">
+					<div class="fl-wf dashboard-head-left DBaccount-head1">
+						<div class="Dashboard-title MobileView" style="display:none;">
+							<h1>Mon compte</h1>
+						</div>
+						<!--h1 class="title title30">Welcome John!</h1-->
+						<h4 class="mt-2">Company Name : Test</h4>
+						<h4>Id Number : 123</h4>
+					</div>
+					<div class="fl-wf dashboard-head-right">
+						<div class="cont-total-income">
+							<div class="flex cont-income-info">
+								<i class="fa-solid fa-cart-shopping"></i>
+								<span>Sales: $425</span>
+							</div>
+							<div class="flex cont-income-info">
+								<i class="fa-solid fa-hand-holding-dollar"></i>
+								<span>Income: $28,325.98</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fl-wf dashboard-body">
+					<div class="fl-wf cont-myaccount-page">
+						<div class="fl-wf cont-form-tabs">
+							<nav>
+								<div class="nav" id="nav-tab" role="tablist">
+									<button class="active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span>Overview</span></button>
+									<button class="" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false"><span>Settings</span></button>
+									<button class="" id="nav-billing-tab" data-bs-toggle="tab" data-bs-target="#nav-billing" type="button" role="tab" aria-controls="nav-billing" aria-selected="false"><span>Billing</span></button>
+								</div>
+							</nav>
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+									<div class="col-12 pade-none cont-settings-form">
+										<form>
+											<div class="col-12 pade-none flex CreateProjectInner">
+												<div class="col-lg-6 col-md-6 col-12 pade-none CreateFormCon">
+													<label>First Name</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-6 col-md-6 col-12 pade-none CreateFormCon">
+													<label>Last Name</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>Email</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>Adresse</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-12 pade-none CreateFormButton">
+													<input type="submit" value="Save Changes" class="SaveCreateButton">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab" tabindex="0">
+									<div class="col-12 pade-none cont-settings-form">
+										<form>
+											<div class="col-12 pade-none flex CreateProjectInner">
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>Email</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>Old Password</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>New Password</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>New Password Confirmation</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-12 pade-none CreateFormButton">
+													<input type="submit" value="Change Password" class="SaveCreateButton">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-billing" role="tabpanel" aria-labelledby="nav-billing-tab" tabindex="0">
+									<div class="col-12 pade-none cont-settings-form">
+										<form>
+											<div class="col-12 pade-none flex CreateProjectInner">
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>Email de réception des bordereaux</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon">
+													<label>IBAN</label>
+													<input type="text" value="" name="">
+												</div>
+												<div class="col-12 pade-none CreateFormButton">
+													<input type="submit" value="Save Changes" class="SaveCreateButton">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Right body part -->
+			</div>
+		<!--RIGHT-SIDEBAR-END-->
+		
+		</section>
+	</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom.js"></script>	
+	
+</body>
+</html>
