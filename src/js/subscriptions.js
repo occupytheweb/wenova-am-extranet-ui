@@ -7,6 +7,28 @@ import {buildDataTable, patchDataTable} from "./dataTable.js";
 import {DateTime} from "luxon";
 
 
+const updateTotal = (subscriptions) => {
+  const total = (subscriptions || [])
+    .map(subscription => subscription.Montant)
+    .filter(amountText => !!amountText)
+    .map(
+      amountText => amountText
+        .replace(/,/g, "")
+        .replace(/€/g, "")
+    )
+    .map(amountText => +amountText)
+    .filter(amount => Number.isFinite(amount))
+    .reduce(
+      (accumulator, amount) => accumulator + +amount
+      ,
+      0
+    )
+  ;
+
+  $("#subscriptions-total").text(`${total.toFixed(2)} €`);
+};
+
+
 $(
   () => {
     updateLayoutUi('subscribers');

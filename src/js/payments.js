@@ -7,6 +7,20 @@ import {buildDataTable, patchDataTable} from "./dataTable";
 import {DateTime} from "luxon";
 
 
+const updateTotal = (payments) => {
+  const total = (payments || [])
+    .map(payment => payment.total)
+    .reduce(
+      (accumulator, amount) => accumulator + +amount
+      ,
+      0
+    )
+  ;
+
+  $("#payments-total").text(`${total.toFixed(2)} €`);
+};
+
+
 $(
   () => {
     updateLayoutUi('payments')
