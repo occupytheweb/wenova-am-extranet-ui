@@ -39,15 +39,25 @@ $(
                         data: 'Attestation_ODDO' ,
                         render: (data, type) => {
                           if (type === 'display') {
-                            return `<a href="${data}" title="${data}">Ouvrir</a>`;
+                            return `
+                              <a href="${data}" title="${data}" class="link-info" target="_blank">
+                                <span>Ouvrir&nbsp;</span>
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                              </a>
+                            `;
                           }
 
                           return data;
                         }
                       }
                     ],
+                    order: [
+                      [3, "desc"],
+                      [2, "desc"],
+                      [0, "asc" ],
+                    ],
                   }
-                )
+                );
               }
             )
           ;
