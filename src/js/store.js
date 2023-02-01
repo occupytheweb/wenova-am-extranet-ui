@@ -23,7 +23,7 @@ export const saveUserInfo = (userInfo) => {
 
 export const getUserInfo = () => JSON
   .parse(
-    localStorage.getItem(keys.userInfo) || ""
+    localStorage.getItem(keys.userInfo) || "{}"
   )
 ;
 
