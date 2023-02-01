@@ -3,13 +3,13 @@ import $ from 'jquery';
 import {fetchSubscriptions} from "./api-client.js";
 import {authenticationGuard} from "./auth.js";
 import {updateLayoutUi} from "./layout.js";
-import {buildDataTable} from "./dataTable.js";
+import {buildDataTable, patchDataTable} from "./dataTable.js";
 import {DateTime} from "luxon";
 
 
 $(
   () => {
-    updateLayoutUi('subscribers')
+    updateLayoutUi('subscribers');
 
     authenticationGuard()
       .then(
@@ -58,6 +58,9 @@ $(
                     ],
                   }
                 );
+
+                patchDataTable();
+                updateTotal(subscriptions.data);
               }
             )
           ;

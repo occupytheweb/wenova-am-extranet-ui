@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {fetchPayments } from "./api-client";
 import {authenticationGuard} from "./auth";
 import {updateLayoutUi} from "./layout";
-import {buildDataTable} from "./dataTable";
+import {buildDataTable, patchDataTable} from "./dataTable";
 import {DateTime} from "luxon";
 
 
@@ -65,6 +65,9 @@ $(
                     ],
                   }
                 );
+
+                patchDataTable();
+                updateTotal(payments.data);
               }
             )
           ;

@@ -39,3 +39,23 @@ export const buildDataTable = (selector, opts) => new DataTable(
   })
 ;
 
+
+export const patchDataTable = () => {
+  $(
+    () => {
+      const label = $('.dataTables_filter label');
+      label.addClass("input-group");
+      label.prepend(
+        $(`<span class="input-group-text"><i class="fas fa-search"></i></span>`)
+      );
+      label.contents()
+        .filter(
+          (_, element) => element.nodeType === 3
+        )
+        .remove()
+      ;
+
+      $('.export-btn-label').text("Export ");
+    }
+  );
+}
