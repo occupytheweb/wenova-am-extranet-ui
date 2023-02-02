@@ -16,7 +16,6 @@ export const buildDataTable = (selector, opts) => new DataTable(
     ordering: true,
     buttons: [
       { extend: 'csvHtml5',   className: 'mr-2' },
-      { extend: 'excelHtml5', className: 'ml-2 btn-info' },
     ],
     dom: `
       <'d-flex flex-row bd-highlight mb-2 align-items-center'
