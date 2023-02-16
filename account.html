@@ -95,7 +95,7 @@
                   <div class="profile-pic">
                     <img src="images/person-3.jpg" alt="Profile Pic" />
                   </div>
-                  <span><strong>John Mix</strong>Site Manager</span>
+                  <span><strong id="userName">John Mix</strong>Site Manager</span>
                 </a>
                 <!--ul class="dropdown-menu" aria-labelledby="dropdown04">
 							<li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> Mon compte</a></li>
@@ -295,25 +295,25 @@
                     tabindex="0"
                   >
                     <div class="col-12 pade-none cont-settings-form">
-                      <form>
+                      <form id="resetPassword">
                         <div class="col-12 pade-none flex CreateProjectInner">
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
                           >
                             <label>Email</label>
-                            <input type="text" value="" name="" />
+                            <input id="userEmail" type="text" value="" name="" />
                           </div>
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
                           >
                             <label>Old Password</label>
-                            <input type="text" value="" name="" />
+                            <input id="oldPassword" type="text" value="" name="" />
                           </div>
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
                           >
                             <label>New Password</label>
-                            <input type="text" value="" name="" />
+                            <input id="newPassword" type="text" value="" name="" />
                           </div>
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
@@ -340,19 +340,19 @@
                     tabindex="0"
                   >
                     <div class="col-12 pade-none cont-settings-form">
-                      <form>
+                      <form id="updateBillingInfo">
                         <div class="col-12 pade-none flex CreateProjectInner">
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
                           >
                             <label>Email de réception des bordereaux</label>
-                            <input type="text" value="" name="" />
+                            <input id="billingEmail" type="text" value="" name="" />
                           </div>
                           <div
                             class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
                           >
                             <label>IBAN</label>
-                            <input type="text" value="" name="" />
+                            <input id="iban" type="text" value="" name="" />
                           </div>
                           <div class="col-12 pade-none CreateFormButton">
                             <input
