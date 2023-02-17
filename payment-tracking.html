@@ -156,7 +156,7 @@
                 <!-- <li> -->
                 <!-- <a href="#"><span><i class="fa-solid fa-book"></i></span><span>Documentation des fonds</span></a> -->
                 <!-- </li> -->
-                <li onclick="disconnect()">
+                <li id="disconnect">
                   <a href="#"
                     ><span><i class="fa-solid fa-right-from-bracket"></i></span
                     ><span>Déconnecter</span></a
@@ -184,10 +184,11 @@
                 <h1>Suivi des paiements</h1>
               </div>
               <div class="dashboardSubscribers-left">
-                <select>
+                <select id="years-selector">
                   <option>Sélectionner une année</option>
-                  <option>.....</option>
-                  <option>.....!</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
                 </select>
               </div>
             </div>
@@ -219,103 +220,7 @@
                     <th>lien pdf</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>52</td>
-                    <td>15/12/2022</td>
-                    <td>novembre 2022</td>
-                    <td>1 000,00 €</td>
-                    <td>02/12/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>69</td>
-                    <td>15/01/2023</td>
-                    <td>6 323 €</td>
-                    <td>6 323,55 €</td>
-                    <td>04/10/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>250</td>
-                    <td>15/02/2023</td>
-                    <td>12 000 €</td>
-                    <td>12 000,63 €</td>
-                    <td>08/05/2023</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>52</td>
-                    <td>15/12/2022</td>
-                    <td>novembre 2022</td>
-                    <td>1 000,00 €</td>
-                    <td>02/12/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>69</td>
-                    <td>15/01/2023</td>
-                    <td>6 323 €</td>
-                    <td>6 323,55 €</td>
-                    <td>04/10/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>250</td>
-                    <td>15/02/2023</td>
-                    <td>12 000 €</td>
-                    <td>12 000,63 €</td>
-                    <td>08/05/2023</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>52</td>
-                    <td>15/12/2022</td>
-                    <td>novembre 2022</td>
-                    <td>1 000,00 €</td>
-                    <td>02/12/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>69</td>
-                    <td>15/01/2023</td>
-                    <td>6 323 €</td>
-                    <td>6 323,55 €</td>
-                    <td>04/10/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>250</td>
-                    <td>15/02/2023</td>
-                    <td>12 000 €</td>
-                    <td>12 000,63 €</td>
-                    <td>08/05/2023</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>52</td>
-                    <td>15/12/2022</td>
-                    <td>novembre 2022</td>
-                    <td>1 000,00 €</td>
-                    <td>02/12/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>69</td>
-                    <td>15/01/2023</td>
-                    <td>6 323 €</td>
-                    <td>6 323,55 €</td>
-                    <td>04/10/2022</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
-                  <tr>
-                    <td>250</td>
-                    <td>15/02/2023</td>
-                    <td>12 000 €</td>
-                    <td>12 000,63 €</td>
-                    <td>08/05/2023</td>
-                    <td><a href="#">bordereau.pdf</a></td>
-                  </tr>
+                <tbody id="payments">
                 </tbody>
                 <!--tfoot>
 						            <tr>
