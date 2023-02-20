@@ -53,6 +53,21 @@ function createSubscriptionsRows(item) {
           </tr>`;
 }
 
+//SHOW TOAST
+function showToast(message, error){
+  if (error)
+    $("#liveToast").addClass("bg-danger");
+  else
+    $("#liveToast").addClass("bg-white");
+
+  $("#toastBody").html(message);
+  $("#liveToast").toast("show");
+}
+
+function handleToast(data){
+  showToast(data.msg, data.statusCode != 200);
+}
+
 //CLIENT FOR APIS CALLS
 async function client(endpoint, method = "GET", data) {
   const token = await getToken();
@@ -94,6 +109,7 @@ $("#login").submit(async (event) => {
     })
   )
     .then((data) => {
+      handleToast(data);
       if (data.statusCode == 200) {
         const { accessToken } = data;
         saveToken(accessToken);
@@ -122,6 +138,7 @@ $("#updateUser").submit(async (event) => {
     })
   )
     .then((data) => {
+      handleToast(data);
       console.log("data", data);
       if (email_signataire_new != email_signataire) logout();
     })
@@ -144,6 +161,7 @@ $("#resetPassword").submit(async (event) => {
     })
   )
     .then((data) => {
+      handleToast(data);
       console.log("data", data);
     })
     .catch((error) => {
@@ -162,6 +180,7 @@ $("#updateBillingInfo").submit(async (event) => {
     })
   )
     .then((data) => {
+      handleToast(data);
       console.log("data", data);
     })
     .catch((error) => {
