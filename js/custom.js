@@ -10,6 +10,7 @@ const ENDPOINTS = {
   SUBSCRIPTION: "subscriptions",
   PAYMENTS: "payments",
 };
+const EMAIL_VALIDATION_PATTERN = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 let PAYMENTS = [];
 let SUBSCRIPTIONS = [];
 let email_signataire = null;
@@ -255,6 +256,30 @@ function logout() {
 }
 
 $("#disconnect").click(logout);
+
+//VALIDATIONS
+$("#newPassword, #confirmPassword").on("keyup", function () {
+  $("#confirmPassword")
+    .get(0)
+    .setCustomValidity(
+      $("#newPassword").val() != $("#confirmPassword").val()
+        ? "Passwords didn't match"
+        : ""
+    );
+});
+
+$("#email").on("keyup", email_validator);
+$("#billingEmail").on("keyup", email_validator);
+
+function email_validator(event) {
+  $("#" + event.target.id)
+    .get(0)
+    .setCustomValidity(
+      EMAIL_VALIDATION_PATTERN.test($("#" + event.target.id).val())
+        ? ""
+        : "Invalid Email Address"
+    );
+}
 
 //DOCUEMET ON LOAD ACTIONS
 $(document).ready(function () {
