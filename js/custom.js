@@ -97,7 +97,7 @@ jQuery("button.navbar-toggle").click(function () {
 // APIs CALLS
 $("#login").submit(async (event) => {
   event.preventDefault();
-  const userName = $("#username").val();
+  const email    = $("#email").val();
   const password = $("#password").val();
 
   client(
