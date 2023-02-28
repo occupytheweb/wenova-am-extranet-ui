@@ -1,16 +1,15 @@
 // CONSTANTS
 const TOKEN = "token";
-const BASE_URL = "http://localhost:4000/";
+const BASE_URL = "https://wenova-api.occupytheweb.io";
 const ENDPOINTS = {
-  SIGN_IN: "login",
-  UPDATE_USER: "updateUser",
-  CHANGE_PASSWORD: "changepassword",
-  UPDATE_BILLING_INFO: "updateBillingInfo",
-  USER_INFO: "user",
-  SUBSCRIPTION: "subscriptions",
-  PAYMENTS: "payments",
+  SIGN_IN: "/auth/token",
+  UPDATE_USER: "/updateUser",
+  CHANGE_PASSWORD: "/changepassword",
+  UPDATE_BILLING_INFO: "/updateBillingInfo",
+  USER_INFO: "/distributors/me",
+  SUBSCRIPTION: "/subscriptions",
+  PAYMENTS: "/payments",
 };
-const EMAIL_VALIDATION_PATTERN = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 let PAYMENTS = [];
 let SUBSCRIPTIONS = [];
 let email_signataire = null;
@@ -32,11 +31,11 @@ function removeToken() {
 function createPaymentsRows(item) {
   return `
           <tr>
-            <td>${item.slip_no || "--"}</td>
-            <td>${item.release_date || "--"}</td>
+            <td>${item.note_id || "--"}</td>
+            <td>${item.note_date || "--"}</td>
             <td>${item.periode || "--"} €</td>
             <td>${item.total || "--"}</td>
-            <td>${item.payment_date || "--"}</td>
+            <td>${item.note_date || "--"}</td>
             <td><a href="#">${item.urlPdf || "--"}</a></td>
           </tr>`;
 }
@@ -47,9 +46,9 @@ function createSubscriptionsRows(item) {
             <td>${item.Investisseur}</td>
             <td>${item.Produit}</td>
             <td>${item.Montant} €</td>
-            <td>${item.Date}</td>
-            <td>${item.Num_ODDO}</td>
-            <td><a href="#">${item.attestation}</a></td>
+            <td>${item['Date BS']}</td>
+            <td>${item['Num ODDO']}</td>
+            <td><a href="#">${item['Attestation_ODDO']}</a></td>
           </tr>`;
 }
 
@@ -67,6 +66,48 @@ function showToast(message, error){
 function handleToast(data){
   showToast(data.msg, data.statusCode != 200);
 }
+
+async function login(data) {
+    return fetch(
+        BASE_URL + ENDPOINTS.SIGN_IN,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: data,
+        })
+    ;
+}
+
+
+async function me() {
+    const token = await getToken();
+
+    return fetch(
+        BASE_URL + ENDPOINTS.USER_INFO,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        },
+    ).then(
+        response => response.ok
+            ? response.json()
+            : (() => {
+                if (!/login/.test(window.location.href)) {
+                    showToast("Session expired", true);
+                    logout();
+                }
+
+                return response.json()
+                    .then(
+                        ({ message }) => Promise.reject(message)
+                    )
+            })()
+    );
+}
+
 
 //CLIENT FOR APIS CALLS
 async function client(endpoint, method = "GET", data) {
@@ -100,25 +141,37 @@ $("#login").submit(async (event) => {
   const email    = $("#email").val();
   const password = $("#password").val();
 
-  client(
-    ENDPOINTS.SIGN_IN,
-    "POST",
-    JSON.stringify({
-      email_signataire: userName,
-      password,
-    })
-  )
-    .then((data) => {
-      handleToast(data);
-      if (data.statusCode == 200) {
-        const { accessToken } = data;
-        saveToken(accessToken);
-        goTo("account.html");
+  await login(
+      JSON.stringify({
+          email,
+          password
+      })
+  ).then(
+      response => {
+          return response.ok
+              ? response.json()
+                    .then(
+                        data => {
+                            const { token } = data;
+                            saveToken(token);
+                            goTo("account.html");
+
+                            return data;
+                        }
+                    )
+              : response.json()
+                  .then(
+                      data => {
+                          const { title: msg } = data;
+
+                          handleToast({ msg });
+
+                          return data;
+                      }
+                  )
+          ;
       }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  )
 });
 
 $("#updateUser").submit(async (event) => {
@@ -191,21 +244,25 @@ $("#updateBillingInfo").submit(async (event) => {
 //HYDRATIONS OF DATA
 
 async function getUserInfo() {
-  client(ENDPOINTS.USER_INFO)
-    .then(({ user }) => {
-      email_signataire = user.email_signataire;
-      $("#firstName").val(user.first_name);
-      $("#lastName").val(user.last_name);
-      $("#email").val(user.email_signataire);
-      $("#address").val(user.address);
-      $("#userEmail").val(user.email_signataire);
-      $("#billingEmail").val(user.email_signataire);
-      $("#iban").val(user.iban);
-      $("#userName").html(`${user.first_name} ${user.last_name}`);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    console.log("Getting user info");
+  await me()
+    .then(
+        user => {
+          email_signataire = user.email_signataire;
+          $("#firstName").val(user.first_name);
+          $("#lastName").val(user.last_name);
+          $("#email").val(user.email_signataire);
+          $("#address").val(user.address);
+          $("#userEmail").val(user.email_signataire);
+          $("#billingEmail").val(user.email_signataire);
+          $("#iban").val(user.iban);
+          $("#userName").html(`${user.first_name} ${user.last_name}`);
+
+          return user;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 }
 
 function getSubscriptionList() {
@@ -287,22 +344,10 @@ $("#newPassword, #confirmPassword").on("keyup", function () {
     );
 });
 
-$("#email").on("keyup", email_validator);
-$("#billingEmail").on("keyup", email_validator);
-
-function email_validator(event) {
-  $("#" + event.target.id)
-    .get(0)
-    .setCustomValidity(
-      EMAIL_VALIDATION_PATTERN.test($("#" + event.target.id).val())
-        ? ""
-        : "Invalid Email Address"
-    );
-}
 
 //DOCUEMET ON LOAD ACTIONS
-$(document).ready(function () {
-  getUserInfo();
+$(document).ready(async () => {
+  await getUserInfo();
   if (window.location.pathname.includes("list-of-subscribers.html")) {
     getSubscriptionList();
   }
