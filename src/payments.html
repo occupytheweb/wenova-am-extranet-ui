@@ -1,0 +1,69 @@
+{{> head }}
+<body>
+
+<script type="module" src="/js/payments.js"></script>
+
+<div class="main-container">
+  {{> toast }}
+  {{> header }}
+
+  <section class="dashboardContentOuterPanel">
+
+    {{> sidebar }}
+
+    <div class="right-side-con">
+      <!-- Right body part -->
+      <div class="fl-wf flex dashboard-head">
+        <div class="fl-wf dashboard-head-left DBaccount-head1">
+          <div class="Dashboard-title MobileView" style="display: none;">
+            <h1>Suivi des paiements</h1>
+          </div>
+          <div class="dashboardSubscribers-left">
+            <select id="years-selector">
+              <option value="">Sélectionner une année</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+        </div>
+        <div class="fl-wf dashboard-head-right">
+          <div class="cont-total-income">
+            <div class="flex cont-income-info">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Total: &nbsp; &nbsp; -</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fl-wf dashboard-body">
+        <!--Table-->
+        <div class="fl-wf list-subscribers-main">
+          <table
+            id="payments-table"
+            class="table table-striped"
+            style="width: 100%;"
+          >
+            <thead>
+            <tr>
+              <th>N° de bordereau</th>
+              <th>Date émission</th>
+              <th>Période</th>
+              <th>Montant</th>
+              <th>Date règlement</th>
+              <th>lien pdf</th>
+            </tr>
+            </thead>
+            <tbody id="payments">
+            </tbody>
+          </table>
+        </div>
+        <!--Table-->
+      </div>
+
+    </div>
+  </section>
+</div>
+
+</body>

@@ -1,0 +1,57 @@
+{{> head }}
+
+<body>
+
+<script type="module" src="/js/login.js"></script>
+
+<section class="fl-wf flex cont-login-page">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div id="toastBody" class="toast-body">
+      </div>
+    </div>
+  </div>
+  <div class="cont-login-middle">
+    <div class="fl-wf cont-login-logo">
+      <img src="images/logo.png" alt="Logo"/>
+    </div>
+    <div class="fl-wf cont-login-form">
+      <form id="login">
+        <div class="otr-form-field">
+          <label>Email</label>
+          <div class="form-field-inn">
+            <div class="input-group-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input
+              type="email"
+              id="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="otr-form-field">
+          <label>Password</label>
+          <span class="password-forgot"
+          ><a href="forgot-password.html">Forgot password?</a></span
+          >
+          <div class="form-field-inn">
+            <div class="input-group-icon">
+              <i class="fa-solid fa-user-lock"></i>
+            </div>
+            <input
+              type="password"
+              id="password"
+              required
+            />
+          </div>
+        </div>
+        <div class="otr-button-field">
+          <input type="submit" value="Login"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>

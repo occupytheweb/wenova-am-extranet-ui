@@ -1,0 +1,72 @@
+{{> head }}
+<body>
+
+<script type="module" src="/js/subscriptions.js"></script>
+
+<div class="main-container">
+  {{> toast }}
+  {{> header }}
+
+  <section class="dashboardContentOuterPanel">
+
+    {{> sidebar }}
+
+
+    <div class="right-side-con">
+      <!-- Right body part -->
+      <div class="fl-wf flex dashboard-head">
+        <div class="fl-wf dashboard-head-left DBaccount-head1">
+          <div class="Dashboard-title MobileView" style="display: none;">
+            <h1>Liste des souscripteurs</h1>
+          </div>
+          <div class="dashboardSubscribers-left">
+            <select id="fund-selector">
+              <option value="">Sélectionner un fonds</option>
+              <option value="WE">WENOVA LIVING</option>
+              <option value="-a">WENOVA LIVING-a</option>
+            </select>
+          </div>
+        </div>
+        <div class="fl-wf dashboard-head-right">
+          <div class="cont-total-income">
+            <div class="flex cont-income-info">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Total des souscriptions: &nbsp; &nbsp; -</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fl-wf dashboard-body">
+        <!--Table-->
+        <div class="fl-wf list-subscribers-main">
+          <table
+            id="subscriptions-table"
+            class="table table-striped"
+            style="width: 100%;"
+          >
+            <thead>
+            <tr>
+              <th>Investisseur</th>
+              <th>Produit</th>
+              <th>Montant</th>
+              <th>Date d'effet</th>
+              <th>N° compte ODDO</th>
+              <th>Attestation lien pdf</th>
+            </tr>
+            </thead>
+            <tbody id="subscriptions">
+            </tbody>
+
+          </table>
+        </div>
+        <!--Table-->
+      </div>
+
+      <!-- Right body part -->
+    </div>
+    <!--RIGHT-SIDEBAR-END-->
+  </section>
+</div>
+
+</body>

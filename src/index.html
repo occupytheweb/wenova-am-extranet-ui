@@ -1,0 +1,219 @@
+{{> head }}
+<body>
+
+<script type="module" src="/js/account.js"></script>
+
+<div class="main-container">
+  {{> toast }}
+  {{> header }}
+
+  <section class="dashboardContentOuterPanel">
+
+    {{> sidebar }}
+
+    <div class="right-side-con">
+      <!-- Right body part -->
+      <div class="fl-wf flex dashboard-head">
+        <div class="fl-wf dashboard-head-left DBaccount-head1">
+          <div class="Dashboard-title MobileView" style="display: none;">
+            <h1>Mon compte</h1>
+          </div>
+<!--          <h1 class="title title30">Welcome John!</h1>-->
+          <h4>Id:&nbsp; <span id="userId"></span></h4>
+          <h4 class="mt-2">Company:&nbsp; <span id="companyName"></span></h4>
+        </div>
+        <div class="fl-wf dashboard-head-right">
+          <div class="cont-total-income">
+            <div class="flex cont-income-info">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Sales: -</span>
+            </div>
+            <div class="flex cont-income-info">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <span>Income: -</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fl-wf dashboard-body">
+        <div class="fl-wf cont-myaccount-page">
+          <div class="fl-wf cont-form-tabs">
+            <nav>
+              <div class="nav" id="nav-tab" role="tablist">
+                <button
+                  class="active"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-home"
+                  aria-selected="true"
+                >
+                  <span>Overview</span>
+                </button>
+                <button
+                  class=""
+                  id="nav-setting-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-setting"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-setting"
+                  aria-selected="false"
+                >
+                  <span>Settings</span>
+                </button>
+                <button
+                  class=""
+                  id="nav-billing-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-billing"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-billing"
+                  aria-selected="false"
+                >
+                  <span>Billing</span>
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-home"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+                tabindex="0"
+              >
+                <div class="col-12 pade-none cont-settings-form">
+                  <form id="updateUser">
+                    <div class="col-12 pade-none flex CreateProjectInner">
+                      <div
+                        class="col-lg-6 col-md-6 col-12 pade-none CreateFormCon"
+                      >
+                        <label>First Name</label>
+                        <input
+                          id="firstName"
+                          type="text"
+                          value=""
+                          name=""
+                          required
+                        />
+                      </div>
+                      <div
+                        class="col-lg-6 col-md-6 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Last Name</label>
+                        <input id="lastName" type="text" value="" name="" required/>
+                      </div>
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Email</label>
+                        <input id="email" type="email" value="" name="" required/>
+                      </div>
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Adresse</label>
+                        <input id="address" type="text" value="" name="" required/>
+                      </div>
+                      <div class="col-12 pade-none CreateFormButton">
+                        <input
+                          type="submit"
+                          value="Save Changes"
+                          class="SaveCreateButton"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-setting"
+                role="tabpanel"
+                aria-labelledby="nav-setting-tab"
+                tabindex="0"
+              >
+                <div class="col-12 pade-none cont-settings-form">
+                  <form id="resetPassword">
+                    <div class="col-12 pade-none flex CreateProjectInner">
+                      <!-- <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Email</label>
+                        <input id="userEmail" type="text" value="" name="" />
+                      </div> -->
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Old Password</label>
+                        <input id="oldPassword" type="password" value="" name="" required/>
+                      </div>
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>New Password</label>
+                        <input id="newPassword" type="password" value="" name="" required/>
+                      </div>
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>New Password Confirmation</label>
+                        <input id="confirmPassword" type="password" value="" name="" required/>
+                      </div>
+                      <div class="col-12 pade-none CreateFormButton">
+                        <input
+                          type="submit"
+                          value="Change Password"
+                          class="SaveCreateButton"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-billing"
+                role="tabpanel"
+                aria-labelledby="nav-billing-tab"
+                tabindex="0"
+              >
+                <div class="col-12 pade-none cont-settings-form">
+                  <form id="updateBillingInfo">
+                    <div class="col-12 pade-none flex CreateProjectInner">
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>Email de réception des bordereaux</label>
+                        <input id="billingEmail" type="email" value="" name="" required/>
+                      </div>
+                      <div
+                        class="col-lg-12 col-md-12 col-12 pade-none CreateFormCon"
+                      >
+                        <label>IBAN</label>
+                        <input id="iban" type="text" value="" name="" required/>
+                      </div>
+                      <div class="col-12 pade-none CreateFormButton">
+                        <input
+                          type="submit"
+                          value="Save Changes"
+                          class="SaveCreateButton"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+</body>
