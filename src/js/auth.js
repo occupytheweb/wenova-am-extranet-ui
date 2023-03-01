@@ -4,7 +4,7 @@ import {
   getUnauthenticatedRequestHeaders,
   notifyOnApiError,
 } from './api-client';
-import {showErrorNotification} from './alerts';
+import {showErrorNotification, showOverlay} from './alerts';
 import * as store from './store';
 
 
@@ -83,6 +83,16 @@ export const profile = async () => {
       );
 
       return userInfo;
+    }
+  )
+  .catch(
+    err => {
+      showOverlay(
+        "Failed to contact API", {
+        }
+      )
+
+      throw err;
     }
   );
 }

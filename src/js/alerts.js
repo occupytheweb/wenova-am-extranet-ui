@@ -18,6 +18,16 @@ export const showErrorNotification = (message, options = {}) => {
 }
 
 
+export const showOverlay = (message, options = {}) => {
+  notie.force({
+    text: message,
+    type: "error",
+    ...defaultNotificationOptions,
+    ...options,
+  })
+}
+
+
 export const showSuccessAlert = (message, options = {}) => {
   Swal.fire({
     text: message,
