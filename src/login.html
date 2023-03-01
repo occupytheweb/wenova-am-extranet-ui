@@ -1,6 +1,9 @@
 {{> head }}
 
 <body>
+
+<script type="module" src="/js/login.js"></script>
+
 <section class="fl-wf flex cont-login-page">
   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -13,7 +16,7 @@
       <img src="images/logo.png" alt="Logo"/>
     </div>
     <div class="fl-wf cont-login-form">
-      <form id="login" method="post" action="login">
+      <form id="login">
         <div class="otr-form-field">
           <label>Email</label>
           <div class="form-field-inn">
@@ -22,9 +25,7 @@
             </div>
             <input
               type="email"
-              name="email"
               id="email"
-              value=""
               required
             />
           </div>
@@ -41,14 +42,12 @@
             <input
               type="password"
               id="password"
-              name="password"
-              value=""
               required
             />
           </div>
         </div>
         <div class="otr-button-field">
-          <input type="submit" value="Login" name=""/>
+          <input type="submit" value="Login"/>
         </div>
       </form>
     </div>
