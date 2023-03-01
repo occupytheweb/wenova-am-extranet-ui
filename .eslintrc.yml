@@ -1,0 +1,46 @@
+root: true
+env:
+  node: true
+  es2022: true
+  mocha: true
+  jest: true
+extends: airbnb-base
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+rules:
+  comma-dangle:
+    - error
+    - functions: never
+      arrays: always-multiline
+      objects: always-multiline
+      imports: always-multiline
+      exports: always-multiline
+  function-paren-newline:
+    - error
+    - consistent
+  global-require: off
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies:
+        - "tests/**.js"
+        - "scripts/**.js"
+  key-spacing:
+    - error
+    - mode: minimum
+      align: value
+  no-console: off
+  no-extra-boolean-cast: off
+  no-multi-spaces:
+    - error
+    - exceptions:
+        ImportDeclaration: true
+        Property: true
+        VariableDeclarator: true
+  no-multiple-empty-lines:
+    - error
+    - max: 2
+  no-unused-vars: warn
+  padded-blocks: off
+  quotes: off
+  semi-style: off
