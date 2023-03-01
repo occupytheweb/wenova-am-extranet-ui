@@ -1,5 +1,8 @@
 {{> head }}
 <body>
+
+<script type="module" src="/js/account.js"></script>
+
 <div class="main-container">
   {{> toast }}
   {{> header }}
@@ -15,19 +18,19 @@
           <div class="Dashboard-title MobileView" style="display: none;">
             <h1>Mon compte</h1>
           </div>
-          <!--h1 class="title title30">Welcome John!</h1-->
-          <h4 class="mt-2">Company Name : Test</h4>
-          <h4>Id Number : 123</h4>
+<!--          <h1 class="title title30">Welcome John!</h1>-->
+          <h4>Id:&nbsp; <span id="userId"></span></h4>
+          <h4 class="mt-2">Company:&nbsp; <span id="companyName"></span></h4>
         </div>
         <div class="fl-wf dashboard-head-right">
           <div class="cont-total-income">
             <div class="flex cont-income-info">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span>Sales: $425</span>
+              <span>Sales: -</span>
             </div>
             <div class="flex cont-income-info">
               <i class="fa-solid fa-hand-holding-dollar"></i>
-              <span>Income: $28,325.98</span>
+              <span>Income: -</span>
             </div>
           </div>
         </div>
