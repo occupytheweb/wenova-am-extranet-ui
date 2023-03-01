@@ -1,5 +1,8 @@
 {{> head }}
 <body>
+
+<script type="module" src="/js/payments.js"></script>
+
 <div class="main-container">
   {{> toast }}
   {{> header }}
@@ -17,10 +20,10 @@
           </div>
           <div class="dashboardSubscribers-left">
             <select id="years-selector">
-              <option>Sélectionner une année</option>
-              <option>2023</option>
-              <option>2022</option>
-              <option>2021</option>
+              <option value="">Sélectionner une année</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
             </select>
           </div>
         </div>
@@ -28,7 +31,7 @@
           <div class="cont-total-income">
             <div class="flex cont-income-info">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span>Total: &nbsp; &nbsp; 235 000 €</span>
+              <span>Total: &nbsp; &nbsp; -</span>
             </div>
           </div>
         </div>
@@ -38,7 +41,7 @@
         <!--Table-->
         <div class="fl-wf list-subscribers-main">
           <table
-            id="example"
+            id="payments-table"
             class="table table-striped"
             style="width: 100%;"
           >
@@ -54,16 +57,6 @@
             </thead>
             <tbody id="payments">
             </tbody>
-            <!--tfoot>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </tfoot-->
           </table>
         </div>
         <!--Table-->
