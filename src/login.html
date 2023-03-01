@@ -1,88 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Wenova</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="fonts/stylesheet.css"
-      type="text/css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="fontawesome/css/all.css"
-      type="text/css"
-      media="all"
-    />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/media.css" type="text/css" media="all" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="SHORTCUT ICON" href="images/favicon.png" />
-  </head>
+{{> head }}
 
-  <body>
-    <section class="fl-wf flex cont-login-page">
-      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div id="toastBody" class="toast-body">
+<body>
+<section class="fl-wf flex cont-login-page">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div id="toastBody" class="toast-body">
+      </div>
+    </div>
+  </div>
+  <div class="cont-login-middle">
+    <div class="fl-wf cont-login-logo">
+      <img src="images/logo.png" alt="Logo"/>
+    </div>
+    <div class="fl-wf cont-login-form">
+      <form id="login" method="post" action="login">
+        <div class="otr-form-field">
+          <label>Email</label>
+          <div class="form-field-inn">
+            <div class="input-group-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              required
+            />
           </div>
         </div>
-      </div>
-      <div class="cont-login-middle">
-        <div class="fl-wf cont-login-logo">
-          <img src="images/logo.png" alt="Logo" />
+        <div class="otr-form-field">
+          <label>Password</label>
+          <span class="password-forgot"
+          ><a href="forgot-password.html">Forgot password?</a></span
+          >
+          <div class="form-field-inn">
+            <div class="input-group-icon">
+              <i class="fa-solid fa-user-lock"></i>
+            </div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value=""
+              required
+            />
+          </div>
         </div>
-        <div class="fl-wf cont-login-form">
-          <form id="login" method="post" action="login">
-            <div class="otr-form-field">
-              <label>Email</label>
-              <div class="form-field-inn">
-                <div class="input-group-icon">
-                  <i class="fa-solid fa-user"></i>
-                </div>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value=""
-                  required
-                />
-              </div>
-            </div>
-            <div class="otr-form-field">
-              <label>Password</label>
-              <span class="password-forgot"
-                ><a href="forgot-password.html">Forgot password?</a></span
-              >
-              <div class="form-field-inn">
-                <div class="input-group-icon">
-                  <i class="fa-solid fa-user-lock"></i>
-                </div>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value=""
-                  required
-                />
-              </div>
-            </div>
-            <div class="otr-button-field">
-              <input type="submit" value="Login" name="" />
-            </div>
-          </form>
+        <div class="otr-button-field">
+          <input type="submit" value="Login" name=""/>
         </div>
-      </div>
-    </section>
+      </form>
+    </div>
+  </div>
+</section>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
-</html>
+</body>
