@@ -3,13 +3,35 @@ import $ from 'jquery';
 import {fetchSubscriptions} from "./api-client.js";
 import {authenticationGuard} from "./auth.js";
 import {updateLayoutUi} from "./layout.js";
-import {buildDataTable} from "./dataTable.js";
+import {buildDataTable, patchDataTable} from "./dataTable.js";
 import {DateTime} from "luxon";
+
+
+const updateTotal = (subscriptions) => {
+  const total = (subscriptions || [])
+    .map(subscription => subscription.Montant)
+    .filter(amountText => !!amountText)
+    .map(
+      amountText => amountText
+        .replace(/,/g, "")
+        .replace(/€/g, "")
+    )
+    .map(amountText => +amountText)
+    .filter(amount => Number.isFinite(amount))
+    .reduce(
+      (accumulator, amount) => accumulator + +amount
+      ,
+      0
+    )
+  ;
+
+  $("#subscriptions-total").text(`${total.toFixed(2)} €`);
+};
 
 
 $(
   () => {
-    updateLayoutUi('subscribers')
+    updateLayoutUi('subscribers');
 
     authenticationGuard()
       .then(
@@ -39,15 +61,28 @@ $(
                         data: 'Attestation_ODDO' ,
                         render: (data, type) => {
                           if (type === 'display') {
-                            return `<a href="${data}" title="${data}">Ouvrir</a>`;
+                            return `
+                              <a href="${data}" title="${data}" class="link-info" target="_blank">
+                                <span>Ouvrir&nbsp;</span>
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                              </a>
+                            `;
                           }
 
                           return data;
                         }
                       }
                     ],
+                    order: [
+                      [3, "desc"],
+                      [2, "desc"],
+                      [0, "asc" ],
+                    ],
                   }
-                )
+                );
+
+                patchDataTable();
+                updateTotal(subscriptions.data);
               }
             )
           ;

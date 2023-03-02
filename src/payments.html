@@ -4,7 +4,6 @@
 <script type="module" src="/js/payments.js"></script>
 
 <div class="main-container">
-  {{> toast }}
   {{> header }}
 
   <section class="dashboardContentOuterPanel">
@@ -31,7 +30,7 @@
           <div class="cont-total-income">
             <div class="flex cont-income-info">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span>Total: &nbsp; &nbsp; -</span>
+              <span>Total: &nbsp; &nbsp; <span id="payments-total"></span></span>
             </div>
           </div>
         </div>

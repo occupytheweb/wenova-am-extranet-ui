@@ -1,6 +1,10 @@
-const keys = {
-  token:    "token",
-  userInfo: "user-info"
+import { DateTime } from "luxon";
+
+
+export const keys = {
+  token:     "token",
+  userInfo:  "user-info",
+  loginTime: "login-time",
 }
 
 
@@ -8,6 +12,11 @@ export const saveToken = (token) => {
   localStorage.setItem(
     keys.token,
     token
+  );
+
+  localStorage.setItem(
+    keys.loginTime,
+    DateTime.now().toISOTime()
   );
 }
 
@@ -23,7 +32,14 @@ export const saveUserInfo = (userInfo) => {
 
 export const getUserInfo = () => JSON
   .parse(
-    localStorage.getItem(keys.userInfo) || ""
+    localStorage.getItem(keys.userInfo) || "{}"
+  )
+;
+
+
+export const getLoginTime = () => DateTime
+  .fromISO(
+    localStorage.getItem(keys.loginTime)
   )
 ;
 

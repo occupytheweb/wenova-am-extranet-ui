@@ -4,6 +4,7 @@ import * as store from './store';
 import {updateLayoutUi} from "./layout";
 import {updateUser, userEmailExists} from "./api-client";
 import {showErrorNotification, showSuccessAlert} from "./alerts";
+import {updateAvatarWithDetailsFromStore} from './avatar';
 
 
 const updateUiWithUserDetailsFromStore = () => {
@@ -52,6 +53,7 @@ const rehydrateAfterUpdate = () => profile()
     sink => {
       updateLayoutUi('account');
       updateUiWithUserDetailsFromStore();
+      updateAvatarWithDetailsFromStore();
 
       return sink;
     }
