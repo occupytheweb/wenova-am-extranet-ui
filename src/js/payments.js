@@ -17,7 +17,7 @@ const updateTotal = (payments) => {
     )
   ;
 
-  $("#payments-total").text(`${total.toFixed(2)} €`);
+  $("#payments-total").text(`${Number.parseInt(total).toLocaleString('fr-FR')} €`);
 };
 
 

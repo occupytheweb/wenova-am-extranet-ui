@@ -25,7 +25,7 @@ const updateTotal = (subscriptions) => {
     )
   ;
 
-  $("#subscriptions-total").text(`${total.toFixed(2)} €`);
+  $("#subscriptions-total").text(`${Number.parseInt(total).toLocaleString('fr-FR')} €`);
 };
 
 
