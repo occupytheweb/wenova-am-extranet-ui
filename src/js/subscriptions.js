@@ -47,7 +47,7 @@ $(
                       { data: 'Investisseur' },
                       { data: 'Produit' },
                       { data: 'Montant' },
-                      { data: 'Date BS',
+                      { data: 'Date_effet',
                         render: (data, type) => {
                           if (type === 'display') {
                             return DateTime.fromISO(data).toFormat('dd MMM yyyy');
