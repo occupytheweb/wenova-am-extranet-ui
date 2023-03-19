@@ -56,7 +56,7 @@ $(
                           return data;
                         }
                       },
-                      { data: 'Num ODDO' },
+                      { data: 'Num_ODDO' },
                       {
                         data: 'Attestation_ODDO' ,
                         render: (data, type) => {
