@@ -16,7 +16,7 @@ export const saveToken = (token) => {
 
   localStorage.setItem(
     keys.loginTime,
-    DateTime.now().toISOTime()
+    DateTime.now().toISO()
   );
 }
 
