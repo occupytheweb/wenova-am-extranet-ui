@@ -1,11 +1,9 @@
 import $ from "jquery";
 import {authenticate, profile} from "./auth";
-import {notifyOnApiError} from "./api-client";
 import * as store from "./store";
 
 
 const authenticateAndNavigate = async (credentials) => authenticate(credentials)
-  .then(notifyOnApiError)
   .then(response => response.json())
   .then(
     data => {
