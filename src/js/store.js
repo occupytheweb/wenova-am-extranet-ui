@@ -44,8 +44,9 @@ export const getLoginTime = () => DateTime
 ;
 
 
+
 export const clear = () => {
-  Object.keys(keys)
+  Object.values(keys)
     .forEach(
       key => localStorage.removeItem(key)
     )
