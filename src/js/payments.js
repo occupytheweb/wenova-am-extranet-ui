@@ -56,7 +56,7 @@ $(
                           return data;
                         }
                       },
-                      { data: 'note_date',
+                      { data: 'payment_date',
                         render: (data, type) => {
                           if (type === 'display') {
                             return toLongDateFormat(data);
