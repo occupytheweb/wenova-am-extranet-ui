@@ -5,6 +5,7 @@ import {authenticationGuard} from "./auth";
 import {updateLayoutUi} from "./layout";
 import {buildDataTable, patchDataTable} from "./dataTable";
 import {DateTime} from "luxon";
+import {toEuroFormat, toShortEuroFormat} from "./formatting.js";
 
 
 const updateTotal = (payments) => {
@@ -17,7 +18,7 @@ const updateTotal = (payments) => {
     )
   ;
 
-  $("#payments-total").text(`${Number.parseInt(total).toLocaleString('fr-FR')} €`);
+  $("#payments-total").text(toShortEuroFormat(total));
 };
 
 
@@ -47,7 +48,15 @@ $(
                         }
                       },
                       { data: 'periode' },
-                      { data: 'total' },
+                      { data: 'total',
+                        render: (data, type) => {
+                          if (type === 'display' && !!data) {
+                            return toLongEuroFormat(data);
+                          }
+
+                          return data;
+                        }
+                      },
                       { data: 'note_date',
                         render: (data, type) => {
                           if (type === 'display') {
