@@ -4,7 +4,7 @@ import {fetchSubscriptions} from "./api-client.js";
 import {authenticationGuard} from "./auth.js";
 import {updateLayoutUi} from "./layout.js";
 import {buildDataTable, patchDataTable} from "./dataTable.js";
-import {DateTime} from "luxon";
+import {toLongEuroFormat, toShortDateFormat, toShortEuroFormat} from "./formatting.js";
 
 
 const updateTotal = (subscriptions) => {
@@ -19,7 +19,7 @@ const updateTotal = (subscriptions) => {
     )
   ;
 
-  $("#subscriptions-total").text(`${Number.parseInt(total).toLocaleString('fr-FR')} €`);
+  $("#subscriptions-total").text(toShortEuroFormat(total));
 };
 
 
@@ -40,11 +40,19 @@ $(
                     columns: [
                       { data: 'Investisseur' },
                       { data: 'Produit' },
-                      { data: 'Montant' },
+                      { data: 'Montant',
+                        render: (data, type) => {
+                          if (type === 'display' && !!data) {
+                            return toLongEuroFormat(data);
+                          }
+
+                          return data;
+                        }
+                      },
                       { data: 'Date_effet',
                         render: (data, type) => {
-                          if (type === 'display') {
-                            return DateTime.fromISO(data).toFormat('dd MMM yyyy');
+                          if (type === 'display' && !!data) {
+                            return toShortDateFormat(data);
                           }
 
                           return data;
