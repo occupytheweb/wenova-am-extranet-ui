@@ -10,14 +10,14 @@ import {DateTime} from "luxon";
 const updateTotal = (subscriptions) => {
   const total = (subscriptions || [])
     .map(subscription => subscription.Montant)
-    .filter(amountText => !!amountText)
+ /*   .filter(amountText => !!amountText)
     .map(
       amountText => amountText
         .replace(/,/g, "")
         .replace(/€/g, "")
     )
     .map(amountText => +amountText)
-    .filter(amount => Number.isFinite(amount))
+    .filter(amount => Number.isFinite(amount)) */
     .reduce(
       (accumulator, amount) => accumulator + +amount
       ,
@@ -25,7 +25,7 @@ const updateTotal = (subscriptions) => {
     )
   ;
 
-  $("#subscriptions-total").text(`${total.toFixed(2)} €`);
+  $("#subscriptions-total").text(`${Number.parseInt(total).toLocaleString('fr-FR')} €`);
 };
 
 
@@ -47,7 +47,7 @@ $(
                       { data: 'Investisseur' },
                       { data: 'Produit' },
                       { data: 'Montant' },
-                      { data: 'Date BS',
+                      { data: 'Date_effet',
                         render: (data, type) => {
                           if (type === 'display') {
                             return DateTime.fromISO(data).toFormat('dd MMM yyyy');
@@ -56,7 +56,7 @@ $(
                           return data;
                         }
                       },
-                      { data: 'Num ODDO' },
+                      { data: 'Num_ODDO' },
                       {
                         data: 'Attestation_ODDO' ,
                         render: (data, type) => {
