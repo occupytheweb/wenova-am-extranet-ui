@@ -4,8 +4,7 @@ import {fetchPayments } from "./api-client";
 import {authenticationGuard} from "./auth";
 import {updateLayoutUi} from "./layout";
 import {buildDataTable, patchDataTable} from "./dataTable";
-import {DateTime} from "luxon";
-import {toEuroFormat, toShortEuroFormat} from "./formatting.js";
+import {toLongDateFormat, toLongEuroFormat, toShortEuroFormat} from "./formatting.js";
 
 
 const updateTotal = (payments) => {
@@ -41,7 +40,7 @@ $(
                       { data: 'note_date',
                         render: (data, type) => {
                           if (type === 'display') {
-                            return DateTime.fromISO(data).toFormat('dd MMM yyyy');
+                            return toLongDateFormat(data);
                           }
 
                           return data;
@@ -60,7 +59,7 @@ $(
                       { data: 'note_date',
                         render: (data, type) => {
                           if (type === 'display') {
-                            return DateTime.fromISO(data).toFormat('dd MMM yyyy');
+                            return toLongDateFormat(data);
                           }
 
                           return data;
