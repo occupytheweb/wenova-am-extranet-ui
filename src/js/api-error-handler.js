@@ -1,5 +1,6 @@
 import {showErrorNotification, showOverlay} from "./alerts.js";
 import {logout} from "./auth.js";
+import {getLoginTime, getUserInfo} from "./store.js";
 
 
 const responseIsJson = (response) => {
@@ -13,13 +14,20 @@ const hasSessionExpired = (response) => (
   && !/login/.test(window.location.href)
 );
 const handleExpiredSession = () => {
-  showOverlay(
-    "Session expired",
-    {
-      buttonText: "Login",
-      callback: () => logout()
-    }
-  );
+  const isInitialLogin = () => Object.keys(getUserInfo()).length === 0;
+
+  if (isInitialLogin()) {
+    logout();
+
+  } else {
+    showOverlay(
+      "Session expired " + getLoginTime(),
+      {
+        buttonText: "Login",
+        callback: () => logout()
+      }
+    );
+  }
 }
 
 
@@ -45,13 +53,7 @@ const errorNotifyingPipelines = [
   {
     canHandle: hasSessionExpired,
     notify: (errorMessage) => {
-      showOverlay(
-        "Session expired",
-        {
-          buttonText: "Login",
-          callback: () => logout()
-        }
-      )
+      handleExpiredSession();
     }
   },
   {
