@@ -2,7 +2,7 @@ import {
   apiUrl,
   getAuthenticatedRequestHeaders,
   getUnauthenticatedRequestHeaders,
-  notifyOnApiError,
+  instrumentedFetch,
 } from './api-client';
 import {showErrorNotification, showOverlay} from './alerts';
 import * as store from './store';
@@ -44,7 +44,7 @@ export const logout = () => {
 export const authenticate = async (credentials) => {
   const {email, password} = credentials;
 
-  return fetch(
+  return instrumentedFetch(
     apiUrl("/auth/token"), {
       method: "post",
       headers: getUnauthenticatedRequestHeaders(),
@@ -58,7 +58,7 @@ export const authenticate = async (credentials) => {
 
 
 export const profile = async () => {
-  return fetch(
+  return instrumentedFetch(
     apiUrl("/distributors/me"), {
       headers: getAuthenticatedRequestHeaders()
     },
@@ -85,16 +85,6 @@ export const profile = async () => {
       return userInfo;
     }
   )
-  .catch(
-    err => {
-      showOverlay(
-        "Failed to contact API", {
-        }
-      )
-
-      throw err;
-    }
-  );
 }
 
 
@@ -104,7 +94,7 @@ export const changePassword = async (payload) => {
     newPassword
   } = payload;
 
-  return fetch(
+  return instrumentedFetch(
     apiUrl("/users/me"), {
       method: "PUT",
       headers: getAuthenticatedRequestHeaders(),
@@ -113,7 +103,7 @@ export const changePassword = async (payload) => {
         newPassword
       }),
     },
-  ).then(notifyOnApiError);
+  );
 }
 
 
