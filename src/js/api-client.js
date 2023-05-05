@@ -1,7 +1,6 @@
 import {API_BASE_URL} from './config';
-import {showErrorNotification} from "./alerts";
-import {logout} from "./auth";
 import * as store from './store';
+import {handleApiConnectionError, notifyOnApiError} from "./api-error-handler.js";
 
 
 export const apiUrl = (path) => `${API_BASE_URL}${path}`;
@@ -20,43 +19,28 @@ export const getAuthenticatedRequestHeaders = () => ({
 });
 
 
-export const redirectToLoginIfRequestRequiresAuthentication = (response) => response.ok
-  ? response
-  : response.status === 401
-    ? (() => {
-      if (!/login/.test(window.location.href)) {
-        showErrorNotification("Session expired");
-        logout();
-      }
-
-      return response.json()
-        .then(
-          ({message}) => Promise.reject(message)
-        )
-    })()
-    : response
-;
-
-export const notifyOnApiError = (response) => response.ok
-  ? response
-  : (() => {
-      return response.json()
-        .then(
-          ({title, message}) => message ?? title
-        )
-        .then(
-          error => {
-            showErrorNotification(error);
-
-            return Promise.reject(error);
-          }
-        )
-  })()
+/**
+ * Instrumented {@link fetch} pre-configured to handle API errors.
+ *
+ * @param {RequestInfo | URL} input      request URL
+ * @param {RequestInit}       [init={}]  request properties
+ *
+ * @return {Promise<Response>}
+ */
+export const instrumentedFetch = (
+  input,
+  init = {}
+) => fetch(
+  input,
+  init
+)
+  .catch(handleApiConnectionError)
+  .then(notifyOnApiError)
 ;
 
 
 export const userEmailExists = (email) => {
-  return fetch(
+  return instrumentedFetch(
     apiUrl(`/distributors/${email}`), {
       method: "HEAD",
       headers: getAuthenticatedRequestHeaders(),
@@ -66,29 +50,25 @@ export const userEmailExists = (email) => {
 
 
 export const updateUser = (patchPayload) => {
-  return fetch(
+  return instrumentedFetch(
     apiUrl("/distributors/me"), {
       method: "PUT",
       headers: getAuthenticatedRequestHeaders(),
       body: JSON.stringify(patchPayload),
     }
-  ).then(notifyOnApiError)
+  );
 }
 
 
-export const fetchSubscriptions = () => fetch(
+export const fetchSubscriptions = () => instrumentedFetch(
   apiUrl("/subscriptions?page=1&pageSize=1000"), {
     headers: getAuthenticatedRequestHeaders()
   }
-).then(notifyOnApiError)
- .then(response => response.json())
-;
+).then(response => response.json());
 
 
-export const fetchPayments = () => fetch(
-    apiUrl("/payments?page=1&pageSize=1000"), {
-      headers: getAuthenticatedRequestHeaders()
-    }
-  ).then(notifyOnApiError)
-    .then(response => response.json())
-;
+export const fetchPayments = () => instrumentedFetch(
+  apiUrl("/payments?page=1&pageSize=1000"), {
+    headers: getAuthenticatedRequestHeaders()
+  }
+).then(response => response.json());

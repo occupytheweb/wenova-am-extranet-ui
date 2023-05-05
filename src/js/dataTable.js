@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import * as jszip from 'jszip';
 import DataTable from 'datatables.net-bs5';
+import languageFr from 'datatables.net-plugins/i18n/fr-FR.mjs';
 import 'datatables.net-buttons-bs5';
 import 'datatables.net-buttons/js/buttons.html5.mjs';
 import 'datatables.net-searchbuilder-bs5';
@@ -11,7 +12,9 @@ $.fn.dataTable.Buttons.jszip(jszip);
 
 
 export const buildDataTable = (selector, opts) => new DataTable(
-  selector, {
+  selector,
+  {
+    language: languageFr,
     responsive: true,
     ordering: true,
     buttons: [

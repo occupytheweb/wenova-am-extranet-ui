@@ -111,7 +111,7 @@ header {height: 75px;display: flex;display: -webkit-flex;align-items: center;pos
 .HeaderleftInner {float: left;width: 320px;}
 .Dashboard-title {float: left;width: 100%;}
 .Dashboard-title h1 {color: #23233d;font-size: 24px;line-height: 30px;font-weight: 500;margin: 0;}
-.HeaderSearchOuter {
+/*.HeaderSearchOuter {
 	float: left;
 	width: 200px;
 	padding-left: 0;
@@ -132,7 +132,7 @@ header {height: 75px;display: flex;display: -webkit-flex;align-items: center;pos
 	font-weight: 400;
 	background: transparent;
 	border: none;
-}
+}*/
 .HeaderRightInner {
 	float: left;
 	width: calc(100% - 320px);
