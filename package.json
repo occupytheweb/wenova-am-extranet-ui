@@ -19,6 +19,9 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
     "@popperjs/core": "^2.11.6",
+    "@zxcvbn-ts/core": "^2.2.1",
+    "@zxcvbn-ts/language-common": "^2.0.1",
+    "@zxcvbn-ts/language-fr": "^2.2.0",
     "bootstrap": "^5.2.3",
     "datatables.net-bs5": "^1.13.4",
     "datatables.net-buttons-bs5": "^2.3.6",

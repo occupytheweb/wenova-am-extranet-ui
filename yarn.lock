@@ -509,6 +509,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zxcvbn-ts/core@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@zxcvbn-ts/core@npm:2.2.1"
+  dependencies:
+    fastest-levenshtein: 1.0.16
+  checksum: 972429f83052c79521985151f9ad1b8d05d25d4c578e6a308ad01c27f58fce61b8e0bdb124ae490f6b3d87e2f15a749bba880c7d07841649903d0c669abe663e
+  languageName: node
+  linkType: hard
+
+"@zxcvbn-ts/language-common@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@zxcvbn-ts/language-common@npm:2.0.1"
+  checksum: 75bbda3b4f453f977c0f1457aa5e4bbb3e4065ef0e0ec1ab5e5270544ab88d9962d32493ae6ad2dbd847cb50e723e60e42fc0f62100d979029c4bed8b7a3c189
+  languageName: node
+  linkType: hard
+
+"@zxcvbn-ts/language-fr@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@zxcvbn-ts/language-fr@npm:2.2.0"
+  checksum: 11048d7a628adfabc5fc9088714199899ee294d351bb4d5f0063fc40f262dcfad75f4aab3f5246451335bcd854c00440cb77f2abfa3e151f90b5fb07ad8a1b03
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -1523,6 +1546,13 @@ __metadata:
     merge2: ^1.3.0
     micromatch: ^4.0.4
   checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
+  languageName: node
+  linkType: hard
+
+"fastest-levenshtein@npm:1.0.16":
+  version: 1.0.16
+  resolution: "fastest-levenshtein@npm:1.0.16"
+  checksum: a78d44285c9e2ae2c25f3ef0f8a73f332c1247b7ea7fb4a191e6bb51aa6ee1ef0dfb3ed113616dcdc7023e18e35a8db41f61c8d88988e877cf510df8edafbc71
   languageName: node
   linkType: hard
 
@@ -3642,6 +3672,9 @@ __metadata:
   dependencies:
     "@fortawesome/fontawesome-free": ^6.3.0
     "@popperjs/core": ^2.11.6
+    "@zxcvbn-ts/core": ^2.2.1
+    "@zxcvbn-ts/language-common": ^2.0.1
+    "@zxcvbn-ts/language-fr": ^2.2.0
     bootstrap: ^5.2.3
     datatables.net-bs5: ^1.13.4
     datatables.net-buttons-bs5: ^2.3.6
