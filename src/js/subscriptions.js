@@ -4,19 +4,13 @@ import {fetchSubscriptions} from "./api-client.js";
 import {authenticationGuard} from "./auth.js";
 import {updateLayoutUi} from "./layout.js";
 import {buildDataTable, patchDataTable} from "./dataTable.js";
-import {DateTime} from "luxon";
+import {toLongEuroFormat, toShortDateFormat, toShortEuroFormat} from "./formatting.js";
 
 
 const updateTotal = (subscriptions) => {
   const total = (subscriptions || [])
     .map(subscription => subscription.Montant)
-    .filter(amountText => !!amountText)
-    .map(
-      amountText => amountText
-        .replace(/,/g, "")
-        .replace(/€/g, "")
-    )
-    .map(amountText => +amountText)
+    .filter(amount => !!amount)
     .filter(amount => Number.isFinite(amount))
     .reduce(
       (accumulator, amount) => accumulator + +amount
@@ -25,7 +19,7 @@ const updateTotal = (subscriptions) => {
     )
   ;
 
-  $("#subscriptions-total").text(`${total.toFixed(2)} €`);
+  $("#subscriptions-total").text(toShortEuroFormat(total));
 };
 
 
@@ -46,17 +40,25 @@ $(
                     columns: [
                       { data: 'Investisseur' },
                       { data: 'Produit' },
-                      { data: 'Montant' },
-                      { data: 'Date BS',
+                      { data: 'Montant',
                         render: (data, type) => {
-                          if (type === 'display') {
-                            return DateTime.fromISO(data).toFormat('dd MMM yyyy');
+                          if (type === 'display' && !!data) {
+                            return toLongEuroFormat(data);
                           }
 
                           return data;
                         }
                       },
-                      { data: 'Num ODDO' },
+                      { data: 'Date_effet',
+                        render: (data, type) => {
+                          if (type === 'display' && !!data) {
+                            return toShortDateFormat(data);
+                          }
+
+                          return data;
+                        }
+                      },
+                      { data: 'Num_ODDO' },
                       {
                         data: 'Attestation_ODDO' ,
                         render: (data, type) => {
