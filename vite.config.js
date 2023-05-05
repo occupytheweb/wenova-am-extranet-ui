@@ -10,6 +10,7 @@ export default {
     alias: {
       '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
       '~fontawesome': resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free'),
+      '~notie': resolve(__dirname, 'node_modules/notie/src'),
     }
   },
   plugins: [

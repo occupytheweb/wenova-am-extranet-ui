@@ -5,6 +5,7 @@ export const keys = {
   token:     "token",
   userInfo:  "user-info",
   loginTime: "login-time",
+  state:     "state",
 }
 
 
@@ -16,7 +17,7 @@ export const saveToken = (token) => {
 
   localStorage.setItem(
     keys.loginTime,
-    DateTime.now().toISOTime()
+    DateTime.now().toISO()
   );
 }
 
@@ -44,8 +45,23 @@ export const getLoginTime = () => DateTime
 ;
 
 
+export const getState = () => JSON
+  .parse(
+    localStorage.getItem(keys.state) || "{}"
+  )
+;
+
+
+export const setState = (state) => localStorage
+  .setItem(
+    keys.state,
+    JSON.stringify(state)
+  )
+;
+
+
 export const clear = () => {
-  Object.keys(keys)
+  Object.values(keys)
     .forEach(
       key => localStorage.removeItem(key)
     )
