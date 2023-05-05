@@ -15,7 +15,7 @@ const updateWelcomeNotification = () => {
     .remove()
   ;
   $("#welcome-notification-text")
-    .prepend(`Welcome ${firstName}!`)
+    .prepend(`Bienvenue ${firstName}!`)
   ;
 
   $("#welcome-notification-time").text(relativeTime);
