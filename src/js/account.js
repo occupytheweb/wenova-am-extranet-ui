@@ -5,6 +5,7 @@ import {updateLayoutUi} from "./layout";
 import {updateUser, userEmailExists} from "./api-client";
 import {showErrorNotification, showSuccessAlert} from "./alerts";
 import {updateAvatarWithDetailsFromStore} from './avatar';
+import {passwordPassesAllCriteria} from './password-strength.js';
 
 
 const updateUiWithUserDetailsFromStore = () => {
@@ -137,6 +138,11 @@ $("#resetPassword").submit(
     const currentPassword      = $("#oldPassword").val();
     const newPassword          = $("#newPassword").val();
     const passwordConfirmation = $("#confirmPassword").val();
+
+    if (!passwordPassesAllCriteria(newPassword)) {
+      showErrorNotification("Password does not match complexity criteria");
+      return;
+    }
 
     if (newPassword !== passwordConfirmation) {
       showErrorNotification("Passwords do not match");
