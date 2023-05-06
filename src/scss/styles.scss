@@ -1,13 +1,17 @@
 $fa-font-path: "~fontawesome/webfonts";
 
+$primary: #23233d;
+$danger: #db4a2d;
+$success: #01ec98;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~fontawesome/scss/fontawesome.scss";
 @import "~fontawesome/scss/regular.scss";
 @import "~fontawesome/scss/solid.scss";
 
 
-$notie-color-error: #db4a2d;
-$notie-color-info: #23233d;
+$notie-color-error: $danger;
+$notie-color-info: $primary;
 
 @import "~notie/notie";
 
