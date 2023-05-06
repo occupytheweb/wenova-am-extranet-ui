@@ -18,3 +18,8 @@ $notie-color-info: $primary;
 body {
   overflow-x: hidden !important;
 }
+
+input[type='password'] {
+  font-family: Verdana, sans-serif;
+  letter-spacing: 0.125em;
+}
