@@ -5,6 +5,7 @@ import {updateLayoutUi} from "./layout";
 import {updateUser, userEmailExists} from "./api-client";
 import {showErrorNotification, showSuccessAlert} from "./alerts";
 import {updateAvatarWithDetailsFromStore} from './avatar';
+import {passwordPassesAllCriteria} from './password-strength.js';
 
 
 const updateUiWithUserDetailsFromStore = () => {
@@ -78,9 +79,9 @@ $("#updateUser").submit(
         .then(
           exists => exists
             ? (() => {
-              showErrorNotification("This email belongs to an existing account");
+              showErrorNotification("Cet email appartient à un compte existant");
 
-              return Promise.reject("Email not unique");
+              return Promise.reject("Cet email n'est pas unique");
             })()
             : Promise.resolve()
         )
@@ -98,7 +99,7 @@ $("#updateUser").submit(
       )
       .then(
         sink => {
-          showSuccessAlert("User details updated");
+          showSuccessAlert("Profil mis à jour");
           rehydrateAfterUpdate();
 
           return sink;
@@ -120,7 +121,7 @@ $("#updateBillingInfo").submit(
       iban,
     }).then(
       sink => {
-        showSuccessAlert("Billing details updated");
+        showSuccessAlert("Détails des borderaux mis à jour");
         rehydrateAfterUpdate();
 
         return sink;
@@ -138,8 +139,13 @@ $("#resetPassword").submit(
     const newPassword          = $("#newPassword").val();
     const passwordConfirmation = $("#confirmPassword").val();
 
+    if (!passwordPassesAllCriteria(newPassword)) {
+      showErrorNotification("Ce mot de passe ne répond pas aux critères");
+      return;
+    }
+
     if (newPassword !== passwordConfirmation) {
-      showErrorNotification("Passwords do not match");
+      showErrorNotification("Les mots de passe ne correspondent pas");
       return;
     }
 
@@ -149,7 +155,7 @@ $("#resetPassword").submit(
     })
     .then(
       sink => {
-        showSuccessAlert("Password changed");
+        showSuccessAlert("Mot de passe mis à jour");
 
         return sink;
       }
