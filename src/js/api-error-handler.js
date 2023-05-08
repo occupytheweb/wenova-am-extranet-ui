@@ -1,6 +1,6 @@
 import {showErrorNotification, showOverlay} from "./alerts.js";
 import {logout} from "./auth.js";
-import {getLoginTime, getUserInfo} from "./store.js";
+import {getUserInfo} from "./store.js";
 
 
 const responseIsJson = (response) => {
@@ -21,7 +21,7 @@ const handleExpiredSession = () => {
 
   } else {
     showOverlay(
-      "Session expired " + getLoginTime(),
+      "Session expired",
       {
         buttonText: "Login",
         callback: () => logout()
