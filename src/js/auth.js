@@ -123,3 +123,15 @@ export const setInitialPassword = async (payload) => {
   );
 }
 
+
+export const passwordRequiresChange = async () => instrumentedFetch(
+  apiUrl("/users/me/password/change-status"),
+  {
+    method: "GET",
+    headers: getAuthenticatedRequestHeaders(),
+  }
+).then(
+  response => response.json()
+).then(
+  status => status.isInitialPassword
+);
