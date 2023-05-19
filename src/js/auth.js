@@ -107,4 +107,19 @@ export const changePassword = async (payload) => {
 }
 
 
-export const authenticationGuard = async () => profile();
+export const setInitialPassword = async (payload) => {
+  const {
+    initialPassword,
+  } = payload;
+
+  return instrumentedFetch(
+    apiUrl("/users/me/password/initial"), {
+      method: "PUT",
+      headers: getAuthenticatedRequestHeaders(),
+      body: JSON.stringify({
+        initialPassword
+      }),
+    },
+  );
+}
+
