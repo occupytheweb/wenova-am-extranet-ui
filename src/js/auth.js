@@ -95,7 +95,7 @@ export const changePassword = async (payload) => {
   } = payload;
 
   return instrumentedFetch(
-    apiUrl("/users/me"), {
+    apiUrl("/users/me/password"), {
       method: "PUT",
       headers: getAuthenticatedRequestHeaders(),
       body: JSON.stringify({
