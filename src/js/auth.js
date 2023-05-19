@@ -135,3 +135,19 @@ export const passwordRequiresChange = async () => instrumentedFetch(
 ).then(
   status => status.isInitialPassword
 );
+
+
+export const authenticationGuard = async () => profile()
+  .then(
+    () => passwordRequiresChange()
+      .then(
+        requiresChange => !!requiresChange
+          ? (_ => {
+            window.location.href = "/initial-password-change.html";
+
+            return _;
+          })()
+          : false
+      )
+  )
+;
