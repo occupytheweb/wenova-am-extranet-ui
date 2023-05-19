@@ -29,7 +29,7 @@ export const showOverlay = (message, options = {}) => {
 
 
 export const showSuccessAlert = (message, options = {}) => {
-  Swal.fire({
+  return Swal.fire({
     text: message,
     icon: "success",
     ...options
