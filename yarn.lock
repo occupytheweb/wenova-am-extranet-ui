@@ -509,19 +509,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zxcvbn-ts/core@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "@zxcvbn-ts/core@npm:2.2.1"
+"@zxcvbn-ts/core@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@zxcvbn-ts/core@npm:3.0.2"
   dependencies:
     fastest-levenshtein: 1.0.16
-  checksum: 972429f83052c79521985151f9ad1b8d05d25d4c578e6a308ad01c27f58fce61b8e0bdb124ae490f6b3d87e2f15a749bba880c7d07841649903d0c669abe663e
+  checksum: 94e69845ea789fdebc96491fd0fbe12e5417ede89dd1431ed29508997c47b5970c5c5cf0c28b9cee6f970254188918674002967f4ac657f09ea95ce59ab6986d
   languageName: node
   linkType: hard
 
-"@zxcvbn-ts/language-common@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@zxcvbn-ts/language-common@npm:2.0.1"
-  checksum: 75bbda3b4f453f977c0f1457aa5e4bbb3e4065ef0e0ec1ab5e5270544ab88d9962d32493ae6ad2dbd847cb50e723e60e42fc0f62100d979029c4bed8b7a3c189
+"@zxcvbn-ts/language-common@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@zxcvbn-ts/language-common@npm:3.0.3"
+  checksum: 4c46b989fb860a5d4c5b7a53780429189597429b50b37e0e38f191ef791fa2948d7f00972e23b2fa7a7f4eb251496917aa02335372e41eb4713cc36b7688b0eb
   languageName: node
   linkType: hard
 
@@ -3679,8 +3679,8 @@ __metadata:
   dependencies:
     "@fortawesome/fontawesome-free": ^6.3.0
     "@popperjs/core": ^2.11.6
-    "@zxcvbn-ts/core": ^2.2.1
-    "@zxcvbn-ts/language-common": ^2.0.1
+    "@zxcvbn-ts/core": ^3.0.2
+    "@zxcvbn-ts/language-common": ^3.0.3
     "@zxcvbn-ts/language-fr": ^2.2.0
     bootstrap: ^5.2.3
     datatables.net-bs5: ^1.13.4
