@@ -43,7 +43,7 @@ export const userEmailExists = (email) => {
   return instrumentedFetch(
     apiUrl(`/distributors/${email}`), {
       method: "HEAD",
-      headers: getAuthenticatedRequestHeaders(),
+      headers: getUnauthenticatedRequestHeaders(),
     }
   ).then(response => response.ok)
 }
@@ -72,3 +72,31 @@ export const fetchPayments = () => instrumentedFetch(
     headers: getAuthenticatedRequestHeaders()
   }
 ).then(response => response.json());
+
+
+export const sendForgotPasswordEmail = (email) => instrumentedFetch(
+  apiUrl(`/users/${encodeURIComponent(email)}/password/forgotten`), {
+    method: "PUT",
+    headers: getUnauthenticatedRequestHeaders(),
+    body: JSON.stringify({
+      protocol: location.protocol,
+      host:     location.host,
+    })
+  }
+);
+
+
+export const resetForgottenPassword = (
+  email,
+  otp,
+  newPassword,
+) => instrumentedFetch(
+  apiUrl(`/users/${encodeURIComponent(email)}/password/forgotten`), {
+    method: "POST",
+    headers: getUnauthenticatedRequestHeaders(),
+    body: JSON.stringify({
+      otp,
+      newPassword
+    })
+  }
+);
