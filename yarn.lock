@@ -979,10 +979,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"datatables.net-datetime@npm:^1.4.0":
-  version: 1.4.1
-  resolution: "datatables.net-datetime@npm:1.4.1"
-  checksum: e8c3360f960896f33f6ff47aac1d2af9c3e56d912766bea2cba3cdb850f012d0f9bf222366ee3fff65f7b350ab620cc672c4ded6c3cc27644de726b2d2a4d077
+"datatables.net-datetime@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "datatables.net-datetime@npm:1.5.0"
+  checksum: fe6582a379cda87ae6e52b4cbf4fe8c8df3ead6a7fb2b0471b4ee87c37c8487206296d9cbc0af7349548e390bd63ecb81b214f8275ba66079408855543d99675
   languageName: node
   linkType: hard
 
@@ -3685,7 +3685,7 @@ __metadata:
     bootstrap: ^5.2.3
     datatables.net-bs5: ^1.13.4
     datatables.net-buttons-bs5: ^2.3.6
-    datatables.net-datetime: ^1.4.0
+    datatables.net-datetime: ^1.5.0
     datatables.net-dt: ^1.13.3
     datatables.net-plugins: ^1.13.4
     datatables.net-responsive-dt: ^2.4.0
