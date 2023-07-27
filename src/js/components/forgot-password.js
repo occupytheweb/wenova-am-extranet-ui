@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {showErrorNotification, showSuccessAlert,} from '../alerts.js';
 import {sendForgotPasswordEmail, userEmailExists,} from '../api-client.js';
+import {logout} from "../auth.js";
 
 
 const params = new URLSearchParams(window.location.search);
@@ -140,3 +141,11 @@ $(`#${containerDetails.email.containerId}`).on(
     ;
   }
 );
+
+
+$("#logout").on(
+  "click",
+  () => {
+    logout();
+  }
+)
