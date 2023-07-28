@@ -509,19 +509,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zxcvbn-ts/core@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "@zxcvbn-ts/core@npm:2.2.1"
+"@zxcvbn-ts/core@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@zxcvbn-ts/core@npm:3.0.2"
   dependencies:
     fastest-levenshtein: 1.0.16
-  checksum: 972429f83052c79521985151f9ad1b8d05d25d4c578e6a308ad01c27f58fce61b8e0bdb124ae490f6b3d87e2f15a749bba880c7d07841649903d0c669abe663e
+  checksum: 94e69845ea789fdebc96491fd0fbe12e5417ede89dd1431ed29508997c47b5970c5c5cf0c28b9cee6f970254188918674002967f4ac657f09ea95ce59ab6986d
   languageName: node
   linkType: hard
 
-"@zxcvbn-ts/language-common@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@zxcvbn-ts/language-common@npm:2.0.1"
-  checksum: 75bbda3b4f453f977c0f1457aa5e4bbb3e4065ef0e0ec1ab5e5270544ab88d9962d32493ae6ad2dbd847cb50e723e60e42fc0f62100d979029c4bed8b7a3c189
+"@zxcvbn-ts/language-common@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@zxcvbn-ts/language-common@npm:3.0.3"
+  checksum: 4c46b989fb860a5d4c5b7a53780429189597429b50b37e0e38f191ef791fa2948d7f00972e23b2fa7a7f4eb251496917aa02335372e41eb4713cc36b7688b0eb
   languageName: node
   linkType: hard
 
@@ -1635,7 +1635,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -2104,10 +2104,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jquery@npm:>=1.7, jquery@npm:^3.6.4":
+"jquery@npm:>=1.7":
   version: 3.6.4
   resolution: "jquery@npm:3.6.4"
   checksum: 8354f7bd0a0424aa714ee1b6b1ef74b410f834eb5c8501682289b358bc151f11677f11188b544f3bb49309d6ec4d15d1a5de175661250c206b06185a252f706f
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "jquery@npm:3.7.0"
+  checksum: 907785e133afc427650a131af5fccef66a404885037513b3d4d7d63aee6409bcc32a39836868c60e59b05aa0fb8ace8961c18b2ee3ffdf6ffdb571d6d7cd88ff
   languageName: node
   linkType: hard
 
@@ -2965,7 +2972,7 @@ __metadata:
 
 "resolve@patch:resolve@1.20.0#~builtin<compat/resolve>":
   version: 1.20.0
-  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
   dependencies:
     is-core-module: ^2.2.0
     path-parse: ^1.0.6
@@ -2975,7 +2982,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>":
   version: 1.22.3
-  resolution: "resolve@patch:resolve@npm%3A1.22.3#~builtin<compat/resolve>::version=1.22.3&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.3#~builtin<compat/resolve>::version=1.22.3&hash=07638b"
   dependencies:
     is-core-module: ^2.12.0
     path-parse: ^1.0.7
@@ -3416,11 +3423,11 @@ __metadata:
 
 "typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
+  checksum: 2eee5c37cad4390385db5db5a8e81470e42e8f1401b0358d7390095d6f681b410f2c4a0c496c6ff9ebd775423c7785cdace7bcdad76c7bee283df3d9718c0f20
   languageName: node
   linkType: hard
 
@@ -3672,8 +3679,8 @@ __metadata:
   dependencies:
     "@fortawesome/fontawesome-free": ^6.3.0
     "@popperjs/core": ^2.11.6
-    "@zxcvbn-ts/core": ^2.2.1
-    "@zxcvbn-ts/language-common": ^2.0.1
+    "@zxcvbn-ts/core": ^3.0.2
+    "@zxcvbn-ts/language-common": ^3.0.3
     "@zxcvbn-ts/language-fr": ^2.2.0
     bootstrap: ^5.2.3
     datatables.net-bs5: ^1.13.4
@@ -3685,7 +3692,7 @@ __metadata:
     datatables.net-searchbuilder-bs5: ^1.4.0
     datatables.net-searchpanes-bs5: ^2.1.1
     glob: ^9.0.2
-    jquery: ^3.6.4
+    jquery: ^3.7.0
     jszip: ^3.10.1
     luxon: ^3.3.0
     notie: ^4.3.1
