@@ -95,7 +95,7 @@ export const changePassword = async (payload) => {
   } = payload;
 
   return instrumentedFetch(
-    apiUrl("/users/me"), {
+    apiUrl("/users/me/password"), {
       method: "PUT",
       headers: getAuthenticatedRequestHeaders(),
       body: JSON.stringify({
@@ -107,4 +107,47 @@ export const changePassword = async (payload) => {
 }
 
 
-export const authenticationGuard = async () => profile();
+export const setInitialPassword = async (payload) => {
+  const {
+    initialPassword,
+  } = payload;
+
+  return instrumentedFetch(
+    apiUrl("/users/me/password/initial"), {
+      method: "PUT",
+      headers: getAuthenticatedRequestHeaders(),
+      body: JSON.stringify({
+        initialPassword
+      }),
+    },
+  );
+}
+
+
+export const passwordRequiresChange = async () => instrumentedFetch(
+  apiUrl("/users/me/password/change-status"),
+  {
+    method: "GET",
+    headers: getAuthenticatedRequestHeaders(),
+  }
+).then(
+  response => response.json()
+).then(
+  status => status.isInitialPassword
+);
+
+
+export const authenticationGuard = async () => profile()
+  .then(
+    () => passwordRequiresChange()
+      .then(
+        requiresChange => !!requiresChange
+          ? (_ => {
+            window.location.href = "/initial-password-change.html";
+
+            return _;
+          })()
+          : false
+      )
+  )
+;

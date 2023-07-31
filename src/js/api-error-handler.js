@@ -65,7 +65,13 @@ const errorNotifyingPipelines = [
 ];
 
 
-export const notifyOnApiError = (response) => response.ok
+const apiCallHasNoErrors = (response) =>
+  response.ok
+  || response.status === 404
+;
+
+
+export const notifyOnApiError = (response) => apiCallHasNoErrors(response)
   ? response
   : (() => {
 
