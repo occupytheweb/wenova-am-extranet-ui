@@ -1,5 +1,5 @@
 import {zxcvbn, zxcvbnOptions} from '@zxcvbn-ts/core'
-import zxcvbnCommonPackage from '@zxcvbn-ts/language-common'
+import * as zxcvbnCommonPackage from '@zxcvbn-ts/language-common'
 import zxcvbnFrPackage from '@zxcvbn-ts/language-fr'
 
 
