@@ -100,10 +100,9 @@ $(`#${containerDetails.email.containerId}`).on(
   async (event) => {
     event.preventDefault();
 
-    const email        = document.getElementById("email").value;
-    const encodedEmail = encodeURIComponent(email);
+    const email = document.getElementById("email").value;
 
-    await userEmailExists(encodedEmail)
+    await userEmailExists(email)
       .then(
         emailExists => emailExists
           ? (

@@ -41,7 +41,7 @@ export const instrumentedFetch = (
 
 export const userEmailExists = (email) => {
   return instrumentedFetch(
-    apiUrl(`/distributors/${email}`), {
+    apiUrl(`/distributors/${encodeURIComponent(email)}`), {
       method: "HEAD",
       headers: getUnauthenticatedRequestHeaders(),
     }
