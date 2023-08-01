@@ -24,7 +24,7 @@
     "@zxcvbn-ts/language-fr": "^2.2.0",
     "bootstrap": "^5.2.3",
     "datatables.net-bs5": "^1.13.4",
-    "datatables.net-buttons-bs5": "^2.3.6",
+    "datatables.net-buttons-bs5": "^2.4.0",
     "datatables.net-datetime": "^1.4.0",
     "datatables.net-dt": "^1.13.3",
     "datatables.net-plugins": "^1.13.4",
