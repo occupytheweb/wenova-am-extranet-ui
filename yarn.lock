@@ -2078,10 +2078,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sweetalert2@npm:^11.7.3":
-  version: 11.7.5
-  resolution: "sweetalert2@npm:11.7.5"
-  checksum: c1c1a4a7c86d3ee5c1b063549c25689c6fd30077a5565a715e28608ce3bb1ad8eab0b707b714535682321b5c7339baf997182d99c1547e90b6a353ded39a7845
+"sweetalert2@npm:^11.7.10":
+  version: 11.7.12
+  resolution: "sweetalert2@npm:11.7.12"
+  checksum: 3f0d26399f7660bf8f410686d9e53bc2216e973a6cedd53a4566fd3f5952e642cf012d0ae68bc47d89cb2e29244ea54489c524217481581945983e5138ce1510
   languageName: node
   linkType: hard
 
@@ -2243,7 +2243,7 @@ __metadata:
     notie: ^4.3.1
     rimraf: ^4.1.3
     sass: ^1.58.3
-    sweetalert2: ^11.7.3
+    sweetalert2: ^11.7.10
     vite: ^4.1.0
     vite-plugin-handlebars: ^1.6.0
     yarn-or-npm: ^3.0.1
