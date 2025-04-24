@@ -70,7 +70,7 @@ RUN --mount=type=cache,uid=1000,gid=1000,target=${YARN_CACHE_FOLDER} \
 
 
 
-FROM nginx:1.25.4-alpine
+FROM nginx:1.28.0-alpine
 
 
 COPY --chown="nginx:nginx" --from=prod-build /app/dist /usr/share/nginx/html
