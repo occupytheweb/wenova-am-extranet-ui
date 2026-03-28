@@ -477,13 +477,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"datatables.net-bs5@npm:>=1.12.1, datatables.net-bs5@npm:^1.13.4":
+"datatables.net-bs5@npm:>=1.12.1":
   version: 1.13.4
   resolution: "datatables.net-bs5@npm:1.13.4"
   dependencies:
     datatables.net: ">=1.12.1"
     jquery: ">=1.7"
   checksum: 89f115c55b4e1c240a811a3395ff6b7795c54b9ae4f549a27ad472ee3e3e851a1ca822e63b67ff21269298c2013b731997a3426fa5ee5aca5b98557b9381fd3e
+  languageName: node
+  linkType: hard
+
+"datatables.net-bs5@npm:^1.13.8":
+  version: 1.13.10
+  resolution: "datatables.net-bs5@npm:1.13.10"
+  dependencies:
+    datatables.net: 1.13.8
+    jquery: ">=1.7"
+  checksum: f406d3baacb3d3a35ce26135d56cdc03fc13733c57892a469e6e7c04217137f24ace3594ef628c638dd78dc9357c9cf640290e9df4ebc4a1f24fd8dd7c8afd4b
   languageName: node
   linkType: hard
 
@@ -595,6 +605,15 @@ __metadata:
     datatables.net: ">=1.12.1"
     jquery: ">=1.7"
   checksum: 2eb40b8409e865184e8480985a9a24fe40048148aaa98c6ebc1d2b0d2a3480dcc494635258d7e034aa87f9b207dd7acf8de69323ebc704b6702302cc9acf58a6
+  languageName: node
+  linkType: hard
+
+"datatables.net@npm:1.13.8":
+  version: 1.13.8
+  resolution: "datatables.net@npm:1.13.8"
+  dependencies:
+    jquery: ">=1.7"
+  checksum: ef43e2cfe6983be5e6ce59eec18fc250687fbe509b7efd4cc2c2cd621f06d8cefa310538c2cc8da68f12bab53d0c4ed4c3e0b0f2149b55a2a62651e3fc2179ea
   languageName: node
   linkType: hard
 
@@ -2228,7 +2247,7 @@ __metadata:
     "@zxcvbn-ts/language-common": ^3.0.3
     "@zxcvbn-ts/language-fr": ^2.2.0
     bootstrap: ^5.3.0
-    datatables.net-bs5: ^1.13.4
+    datatables.net-bs5: ^1.13.8
     datatables.net-buttons-bs5: ^2.3.6
     datatables.net-datetime: ^1.5.0
     datatables.net-dt: ^1.13.3
